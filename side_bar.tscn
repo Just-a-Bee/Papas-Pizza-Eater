@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bjqvp1pqpaiki"]
+[gd_scene format=3 uid="uid://ddimem50csu6i"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,15 +9,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(-1, 0, 192, 0, 192, 648, 0, 648)
+polygon = PackedVector2Array(-1, 0, 256, 0, 256, 648, 0, 648)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
+offset_right = 256.0
 offset_bottom = 40.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -30,3 +31,7 @@ text = "Eat"
 [node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "DIsh?"
+
+[node name="Button4" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Pizza"
