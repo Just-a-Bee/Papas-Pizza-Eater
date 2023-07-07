@@ -1,0 +1,46 @@
+
+Orders:
+  Orders are all scripted
+  Orders have # of each topping to eat
+  % of pizza to eat
+  Order objects also contain how much of each topping pizza has, pizza for eating station is generated from order, and expected time for scoring
+  Orders are a scene exist as the little card thing
+
+Pizza generation:
+  Base pizza image
+  Instantiate toppings as sprites based on order
+  Position toppings proceduraly
+
+Pizza eating:
+  Player crawls around eating the pizza
+  Controls like a car
+  Can get upgrades to modify abilities
+  Toppings have effects?
+
+Dishes station? bonus if we have time
+
+Fullfilment Station:
+  Pizza box is returned with remaining pizza
+  Customer grades player based on metrics
+    Speed
+    %Eaten
+    Toppings eaten
+  Recieve tips based on grade
+
+Pizzeria Across the Steet Station:
+  Buy upgrades
+    Fork (wider eating range)
+      Knife (fork but more)
+        Comically large spoon (most)
+    Left skateboard (turn left faster)
+    Right skateboard (turn right faster)
+    Doorbell (rings when customers enter)
+    Topping claw machine(maybe lot of work)
+
+  Buy slices of pizza that give various buffs
+    Energizing pizza
+    Oily pizza
+    Hungering pizza
+
+Penalty for not eating pizzas properly:
+  Go out of business??
