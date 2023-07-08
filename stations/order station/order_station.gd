@@ -9,6 +9,13 @@ const COUNTER_POS = Vector2(384, 448)
 func _ready():
 	spawn_customer()
 
+#functions called when station is opened or closed
+func station_opened():
+	pass
+func station_closed():
+	pass
+
+
 #function to spawn a new customer at the door
 func spawn_customer():
 	var new_customer = customer.instantiate()

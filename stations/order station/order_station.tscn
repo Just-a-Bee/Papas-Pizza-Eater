@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ek8qjov70eh0"]
+
+[ext_resource type="Script" path="res://stations/order station/order_station.gd" id="1_3wba8"]
+
+[node name="OrderStation" type="Node2D"]
+script = ExtResource("1_3wba8")
