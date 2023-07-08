@@ -20,3 +20,9 @@ func change_station(new_station):
 	current_station = station_arr[new_station]
 	current_station.show()
 	current_station.station_opened()
+
+func show_cut_scene():
+	$CutScene.show()
+func hide_cut_scene():
+	$CutScene.hide()
+
