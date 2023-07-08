@@ -35,6 +35,5 @@ func finish_pizza():
 	var tween = get_tree().create_tween()
 	tween.tween_property($Pizza, "position", PIZZA_POSITION, 1)
 	await tween.finished
-	main.change_station(main.STATIONS.RETURN)
 	remove_child($Pizza)
-	#give the return station!!
+	#do the pizza returning cutscene!!
