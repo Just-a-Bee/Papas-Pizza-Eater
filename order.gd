@@ -12,12 +12,11 @@ signal contents_displayed
 
 #on ready populate text with variable data
 func _ready():
-	$Contents/Labels/OrderNumber.text += str(number)
+	$Contents/Labels/Number.text += str(number)
 	$Contents/Labels/Percent.text += str(percent_to_eat)
 	for topping in topping_to_eat_dict.keys():
 		var topping_label = Label.new()
 		topping_label.text = topping + ": " + str(topping_to_eat_dict[topping])
-		topping_label.theme = load("res://black.tres")
 		topping_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		topping_label.visible = false
 		$Contents/Labels.add_child(topping_label)
