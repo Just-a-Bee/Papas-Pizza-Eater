@@ -5,9 +5,9 @@ extends Node2D
 var pizza = preload("res://stations/eat station/eat_station_pizza.tscn")
 
 
-const PIZZA_START = Vector2(-300, 160)
-const PIZZA_POSITION = Vector2(300, 160)
-const PIZZA_END = Vector2(600, 160)
+const PIZZA_START = Vector2(-100, 48)
+const PIZZA_POSITION = Vector2(88, 48)
+const PIZZA_END = Vector2(400, 48)
 
 func _ready():
 	$Player.set_process(false)

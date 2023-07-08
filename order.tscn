@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmugaxn0i0pys"]
+[gd_scene load_steps=3 format=3 uid="uid://bmugaxn0i0pys"]
 
 [ext_resource type="Script" path="res://order.gd" id="1_m1rxq"]
+[ext_resource type="Texture2D" uid="uid://c2xterihaajsh" path="res://assets/order paper.png" id="2_12gqx"]
 
 [node name="Order" type="Control"]
 layout_mode = 3
@@ -11,22 +12,23 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m1rxq")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.509804, 0.509804, 0.509804, 1)
-polygon = PackedVector2Array(0, 0, 224, 0, 224, 512, 0, 512)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.769531, 1)
+texture = ExtResource("2_12gqx")
+centered = false
 
 [node name="Contents" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 224.0
+offset_right = 197.0
 offset_bottom = 512.0
 
 [node name="Labels" type="VBoxContainer" parent="Contents"]
 layout_mode = 2
 
 [node name="Number" type="Label" parent="Contents/Labels"]
-visible = false
 layout_mode = 2
-text = "Number: "
+theme_override_font_sizes/font_size = 50
+text = "00"
 horizontal_alignment = 1
 
 [node name="Percent" type="Label" parent="Contents/Labels"]

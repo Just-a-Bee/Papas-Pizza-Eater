@@ -12,12 +12,12 @@ grow_vertical = 2
 script = ExtResource("1_knxtx")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(0, 0, 224, 0, 224, 648, 0, 648)
+polygon = PackedVector2Array(0, 0, 192, 0, 192, 512, 0, 512)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_top = 8.0
-offset_right = 224.0
+offset_right = 192.0
 offset_bottom = 48.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
@@ -32,15 +32,10 @@ text = "Order"
 layout_mode = 2
 text = "Eat"
 
-[node name="Return" type="Button" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "Return"
-
 [node name="Shop" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Shop"
 
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Order" to="." method="_on_order_button_up"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Eat" to="." method="_on_eat_button_up"]
-[connection signal="button_up" from="VBoxContainer/HBoxContainer/Return" to="." method="_on_return_button_up"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Shop" to="." method="_on_shop_button_up"]

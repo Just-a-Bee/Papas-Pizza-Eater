@@ -4,11 +4,13 @@ extends Sprite2D
 var mask:Image
 
 func _ready():
-	mask = Image.create(512, 512, false, Image.FORMAT_RGBA8)
+	mask = Image.create(424, 424, false, Image.FORMAT_RGBA8)
 	mask.fill(Color.TRANSPARENT)
 
 func _process(_delta):
-	mask.fill_rect(Rect2i(player.position.x-30-(position.x), player.position.y-30-(position.y), 60, 60), Color.BLACK)
+	var head_pos = player.position + Vector2(0, -50).rotated(player.rotation)
+	var eat_rect = Rect2i(head_pos.x-15 - position.x, head_pos.y-15 - position.y, 30, 30)
+	mask.fill_rect(eat_rect, Color.BLACK)
 	material.set_shader_parameter("mask", ImageTexture.create_from_image(mask))
 	pass
 
