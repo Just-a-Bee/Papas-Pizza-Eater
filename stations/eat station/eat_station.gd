@@ -1,5 +1,6 @@
 extends Node2D
 
+
 func _ready():
 	$Player.set_process(false)
 

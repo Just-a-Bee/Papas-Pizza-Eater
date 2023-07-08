@@ -1,7 +1,5 @@
 extends Node2D
 
-
-
 func _ready():
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "position", get_parent().COUNTER_POS, 3)
