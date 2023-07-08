@@ -1,6 +1,7 @@
 extends Control
 class_name Card
 
+@onready var main = get_parent().get_parent().get_parent()
 
 var number = 0 #order number
 var percent_to_eat = 100 #percent of pizza to eat
@@ -35,4 +36,4 @@ func hide_eat():
 	$Contents/EatButton.hide()
 
 func _on_eat_button_button_up():
-	pass
+	main.get_node("EatStation").generate_pizza(topping_total_dict)

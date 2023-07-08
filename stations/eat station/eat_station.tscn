@@ -1,25 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dce7ur7u6i38w"]
+[gd_scene load_steps=4 format=3 uid="uid://dce7ur7u6i38w"]
 
 [ext_resource type="Script" path="res://stations/eat station/eat_station.gd" id="1_5820f"]
-[ext_resource type="Shader" path="res://edible.gdshader" id="2_8f1ff"]
-[ext_resource type="Texture2D" uid="uid://cjxb8sknwxub7" path="res://pizza_base.png" id="3_a48je"]
-[ext_resource type="Script" path="res://stations/eat station/eat_station_pizza.gd" id="4_xjolg"]
 [ext_resource type="Texture2D" uid="uid://bbr8prue4hs7d" path="res://icon.svg" id="5_r5ay5"]
 [ext_resource type="Script" path="res://stations/eat station/player.gd" id="6_wn6uu"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_b3x4i"]
-shader = ExtResource("2_8f1ff")
 
 [node name="EatStation" type="Node2D"]
 script = ExtResource("1_5820f")
 
-[node name="Pizza" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_b3x4i")
-texture = ExtResource("3_a48je")
-centered = false
-script = ExtResource("4_xjolg")
-
 [node name="Player" type="Sprite2D" parent="."]
-position = Vector2(392, 384)
+position = Vector2(312, 448)
 texture = ExtResource("5_r5ay5")
 script = ExtResource("6_wn6uu")
