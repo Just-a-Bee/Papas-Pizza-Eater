@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0t7w8h5ig7kh"]
+
+[ext_resource type="Script" path="res://customer.gd" id="1_5ae37"]
+[ext_resource type="Theme" uid="uid://teb1pxbi0gcw" path="res://black.tres" id="2_vhxv0"]
+
+[node name="Customer" type="Node2D"]
+script = ExtResource("1_5ae37")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 256, 0, 0, 128, 0, 128, 256)
+
+[node name="OrderButton" type="Button" parent="."]
+visible = false
+offset_right = 99.0
+offset_bottom = 31.0
+theme = ExtResource("2_vhxv0")
+text = "Take Order!"
+
+[connection signal="button_up" from="OrderButton" to="." method="_on_order_button_button_up"]
