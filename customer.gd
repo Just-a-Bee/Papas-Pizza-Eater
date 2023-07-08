@@ -8,4 +8,4 @@ func _ready():
 
 
 func _on_order_button_button_up():
-	get_parent().take_order()
+	get_parent().take_order(self)
