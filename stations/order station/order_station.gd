@@ -6,8 +6,8 @@ extends Node2D
 var customer = preload("res://customer.tscn")
 var order = preload("res://order.tscn")
 
-const DOOR_POS = Vector2(960, 448)
-const COUNTER_POS = Vector2(384, 448)
+const DOOR_POS = Vector2(700, 220)
+const COUNTER_POS = Vector2(160, 220)
 
 func _ready():
 	spawn_customer()

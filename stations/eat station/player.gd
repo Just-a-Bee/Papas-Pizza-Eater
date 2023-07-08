@@ -1,4 +1,4 @@
-extends Sprite2D
+extends AnimatedSprite2D
 
 var speed = 100
 var acceleration = 50
@@ -12,6 +12,9 @@ func _process(delta):
 	if Input.is_action_pressed("up"):
 		position += Vector2(0, -speed).rotated(rotation)*delta
 		moving = true
+		play("Crawl")
+	else:
+		pause()
 	
 	#handle turning
 	var turn_tmp = turn_speed
