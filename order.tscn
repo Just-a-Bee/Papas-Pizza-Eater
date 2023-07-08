@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dofi5etwohivx"]
+[gd_scene load_steps=2 format=3 uid="uid://bmugaxn0i0pys"]
 
 [ext_resource type="Script" path="res://order.gd" id="1_m1rxq"]
-[ext_resource type="Theme" uid="uid://teb1pxbi0gcw" path="res://black.tres" id="2_gb7vd"]
 
 [node name="Order" type="Control"]
 layout_mode = 3
@@ -13,34 +12,30 @@ grow_vertical = 2
 script = ExtResource("1_m1rxq")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.54902, 0.54902, 0.54902, 1)
-polygon = PackedVector2Array(0, 0, 224, 0, 224, 520, 0, 520)
+color = Color(0.509804, 0.509804, 0.509804, 1)
+polygon = PackedVector2Array(0, 0, 224, 0, 224, 512, 0, 512)
 
 [node name="Contents" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_right = 224.0
-offset_bottom = 520.0
+offset_bottom = 512.0
 
 [node name="Labels" type="VBoxContainer" parent="Contents"]
 layout_mode = 2
 
-[node name="OrderNumber" type="Label" parent="Contents/Labels"]
+[node name="Number" type="Label" parent="Contents/Labels"]
 visible = false
 layout_mode = 2
-theme = ExtResource("2_gb7vd")
-text = "Order number: "
+text = "Number: "
 horizontal_alignment = 1
 
 [node name="Percent" type="Label" parent="Contents/Labels"]
 visible = false
 layout_mode = 2
-theme = ExtResource("2_gb7vd")
-text = "   % to eat: "
+text = "% to eat: "
 horizontal_alignment = 1
 
 [node name="EatButton" type="Button" parent="Contents"]
 visible = false
 layout_mode = 2
 text = "Eat Pizza"
-
-[connection signal="button_up" from="Contents/EatButton" to="." method="_on_eat_button_button_up"]
