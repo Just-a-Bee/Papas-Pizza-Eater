@@ -10,6 +10,7 @@ enum STATIONS
 
 @onready var station_arr = [$OrderStation, $EatStation] #array of all stations, indexes are in enum
 @onready var current_station = $OrderStation
+var current_order = null
 
 #function to change station, new station is an int from the station enum
 func change_station(new_station):
