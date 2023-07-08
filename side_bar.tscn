@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://ddimem50csu6i"]
+[gd_scene load_steps=2 format=3 uid="uid://ddimem50csu6i"]
+
+[ext_resource type="Script" path="res://side_bar.gd" id="1_knxtx"]
 
 [node name="SideBar" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_knxtx")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 polygon = PackedVector2Array(0, 0, 224, 0, 224, 648, 0, 648)
@@ -21,18 +24,23 @@ offset_bottom = 48.0
 layout_mode = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Order" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Order"
 
-[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Eat" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Eat"
 
-[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Return" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-text = "DIsh?"
+text = "Return"
 
-[node name="Button4" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Shop" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-text = "Pizza"
+text = "Shop"
+
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Order" to="." method="_on_order_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Eat" to="." method="_on_eat_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Return" to="." method="_on_return_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Shop" to="." method="_on_shop_button_up"]
