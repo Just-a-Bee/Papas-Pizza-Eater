@@ -3,6 +3,7 @@ class_name Card
 
 @onready var main = get_parent().get_parent().get_parent()
 
+
 var number = 0 #order number
 var percent_to_eat = 100 #percent of pizza to eat
 var topping_to_eat_dict = {"Mushrooms" = 4, "Pepperoni" = 2}
@@ -34,6 +35,20 @@ func show_eat():
 	$Contents/EatButton.show()
 func hide_eat():
 	$Contents/EatButton.hide()
+func show_finish():
+	$Contents/FinishButton.show()
+func hide_finish():
+	$Contents/FinishButton.hide()
 
 func _on_eat_button_button_up():
 	main.get_node("EatStation").generate_pizza(topping_total_dict)
+	hide_eat()
+	show_finish()
+
+
+
+
+func _on_finish_button_button_up():
+	main.get_node("EatStation").finish_pizza()
+	hide_finish()
+	
