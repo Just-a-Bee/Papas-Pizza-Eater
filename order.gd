@@ -26,8 +26,8 @@ func _ready():
 
 func display_contents():
 	for item in $Contents/Labels.get_children():
-		await get_tree().create_timer(1).timeout
 		item.show()
+		await get_tree().create_timer(1).timeout
 	contents_displayed.emit()
 
 
@@ -41,8 +41,9 @@ func hide_finish():
 	$Contents/FinishButton.hide()
 
 func _on_eat_button_button_up():
+	get_parent().get_parent().set_disable(true)
 	main.get_node("EatStation").generate_pizza(topping_total_dict)
-	hide_eat()
+	$Contents/EatButton.hide()
 	show_finish()
 
 

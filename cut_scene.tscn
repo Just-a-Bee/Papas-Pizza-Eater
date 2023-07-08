@@ -1,5 +1,10 @@
-[gd_scene format=3 uid="uid://cc7bw4s681agd"]
+[gd_scene load_steps=2 format=3 uid="uid://cc7bw4s681agd"]
+
+[ext_resource type="Texture2D" uid="uid://dr2gmemkok0iu" path="res://assets/cut scene.png" id="1_y3tlo"]
 
 [node name="CutScene" type="Node2D"]
 
 [node name="bg" type="Sprite2D" parent="."]
+scale = Vector2(0.492091, 0.948148)
+texture = ExtResource("1_y3tlo")
+centered = false
