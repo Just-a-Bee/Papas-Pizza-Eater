@@ -4,8 +4,7 @@ enum STATIONS
 {
 	ORDER = 0,
 	EAT = 1,
-	RETURN = 2,
-	SHOP = 3
+	SHOP = 2
 }
 
 @onready var station_arr = [$OrderStation, $EatStation] #array of all stations, indexes are in enum

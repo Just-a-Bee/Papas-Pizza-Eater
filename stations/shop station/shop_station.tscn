@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://djdvdr7l5c46y"]
+
+[ext_resource type="Script" path="res://stations/shop station/shop_station.gd" id="1_qyg3d"]
+[ext_resource type="PackedScene" uid="uid://bd8rhgiotulfj" path="res://stations/shop station/shop_item.tscn" id="2_q1leq"]
+
+[node name="ShopStation" type="Node2D"]
+script = ExtResource("1_qyg3d")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_right = 776.0
+offset_bottom = 432.0
+theme_override_constants/h_separation = 250
+theme_override_constants/v_separation = 150
+columns = 3
+
+[node name="ShopItem" parent="GridContainer" instance=ExtResource("2_q1leq")]
+layout_mode = 2
+
+[node name="ShopItem2" parent="GridContainer" instance=ExtResource("2_q1leq")]
+layout_mode = 2
+
+[node name="ShopItem3" parent="GridContainer" instance=ExtResource("2_q1leq")]
+layout_mode = 2
+
+[node name="ShopItem4" parent="GridContainer" instance=ExtResource("2_q1leq")]
+layout_mode = 2
+
+[node name="ShopItem5" parent="GridContainer" instance=ExtResource("2_q1leq")]
+layout_mode = 2
