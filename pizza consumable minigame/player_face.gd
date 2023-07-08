@@ -1,7 +1,7 @@
 extends Sprite2D
 
-var closemouthimag = ImageTexture.create_from_image(Image.load_from_file("res://pizza consumable minigame/assets/custome-bite.png"))
-var openmouthima = ImageTexture.create_from_image(Image.load_from_file("res://pizza consumable minigame/assets/custome.png"))
+var closemouthimag = load("res://pizza consumable minigame/assets/custome-bite.png")
+var openmouthima = load("res://pizza consumable minigame/assets/custome.png")
 
 
 #position of the mouth on the customer sprite
