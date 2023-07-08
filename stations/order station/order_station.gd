@@ -1,10 +1,7 @@
 extends Node2D
 
-@onready var main = get_parent()
-@onready var side_bar = get_parent().get_node("SideBar")
-
 var customer = preload("res://customer.tscn")
-var order = preload("res://order.tscn")
+var card = preload("res://card.tscn")
 
 const DOOR_POS = Vector2(960, 448)
 const COUNTER_POS = Vector2(384, 448)
@@ -26,12 +23,5 @@ func spawn_customer():
 	add_child(new_customer)
 
 #function to take a customer's order
-func take_order():
-	#$Camera2D.enabled = true
-	var new_order = order.instantiate()
-	side_bar.get_node("VBoxContainer").add_child(new_order)
-	side_bar.set_disable(true)
-	await new_order.contents_displayed
-	$Camera2D.enabled = false
-	side_bar.set_disable(false)
-	main.current_order = new_order
+func take_order(orderer):
+	pass
