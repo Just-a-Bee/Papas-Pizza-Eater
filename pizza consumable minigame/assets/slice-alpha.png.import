@@ -1,0 +1,14 @@
+[remap]
+
+importer="image"
+type="Image"
+uid="uid://d1ymrg25iru3q"
+path="res://.godot/imported/slice-alpha.png-4ef303ee39dce562728a8855e5938dce.image"
+
+[deps]
+
+source_file="res://pizza consumable minigame/assets/slice-alpha.png"
+dest_files=["res://.godot/imported/slice-alpha.png-4ef303ee39dce562728a8855e5938dce.image"]
+
+[params]
+

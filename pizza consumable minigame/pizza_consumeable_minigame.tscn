@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://bbirg73by4wl5"]
 
 [ext_resource type="Shader" path="res://edible.gdshader" id="1_84521"]
-[ext_resource type="Texture2D" uid="uid://23iaojorv548" path="res://pizza consumable minigame/assets/custome.png" id="1_eoban"]
-[ext_resource type="Script" path="res://pizza consumable minigame/Custome.gd" id="2_5ipp1"]
-[ext_resource type="Texture2D" uid="uid://b6dylwjxu6si0" path="res://pizza consumable minigame/assets/slice.png" id="3_pubw5"]
-[ext_resource type="Script" path="res://pizza consumable minigame/pizzaSlice.gd" id="4_tukvo"]
+[ext_resource type="Script" path="res://pizza consumable minigame/player_face.gd" id="2_cy5q6"]
+[ext_resource type="Texture2D" uid="uid://23iaojorv548" path="res://pizza consumable minigame/assets/custome.png" id="3_b5qpw"]
+[ext_resource type="Texture2D" uid="uid://b6dylwjxu6si0" path="res://pizza consumable minigame/assets/slice.png" id="4_slbxe"]
+[ext_resource type="Script" path="res://pizza consumable minigame/pizza_slice.gd" id="5_s2rb0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1csnk"]
 shader = ExtResource("1_84521")
@@ -12,11 +12,11 @@ shader = ExtResource("1_84521")
 [node name="pizza_consumeable_minigame" type="Node2D"]
 
 [node name="player face" type="Sprite2D" parent="."]
-texture = ExtResource("1_eoban")
-script = ExtResource("2_5ipp1")
+texture = ExtResource("3_b5qpw")
+script = ExtResource("2_cy5q6")
 
 [node name="slice" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_1csnk")
 position = Vector2(568, 442)
-texture = ExtResource("3_pubw5")
-script = ExtResource("4_tukvo")
+texture = ExtResource("4_slbxe")
+script = ExtResource("5_s2rb0")

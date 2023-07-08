@@ -1,5 +1,7 @@
 shader_type canvas_item;
 
+//shader by Hephep, https://godotshaders.com/shader/cut-out-shader/
+
 uniform sampler2D mask;
 
 void fragment() {
