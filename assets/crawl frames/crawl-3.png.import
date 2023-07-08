@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjxb8sknwxub7"
-path="res://.godot/imported/pizza_base.png-de24b312cafa646df249e2ca055e8cb7.ctex"
+uid="uid://cpoqfeaybgvfa"
+path="res://.godot/imported/crawl-3.png-bed102445d8a10e39b4855ebbc870c19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pizza_base.png"
-dest_files=["res://.godot/imported/pizza_base.png-de24b312cafa646df249e2ca055e8cb7.ctex"]
+source_file="res://assets/crawl frames/crawl-3.png"
+dest_files=["res://.godot/imported/crawl-3.png-bed102445d8a10e39b4855ebbc870c19.ctex"]
 
 [params]
 
