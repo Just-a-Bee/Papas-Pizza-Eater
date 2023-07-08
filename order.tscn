@@ -40,4 +40,10 @@ visible = false
 layout_mode = 2
 text = "Eat Pizza"
 
+[node name="FinishButton" type="Button" parent="Contents"]
+visible = false
+layout_mode = 2
+text = "Finish Eating"
+
 [connection signal="button_up" from="Contents/EatButton" to="." method="_on_eat_button_button_up"]
+[connection signal="button_up" from="Contents/FinishButton" to="." method="_on_finish_button_button_up"]
