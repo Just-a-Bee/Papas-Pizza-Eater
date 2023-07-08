@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dofi5etwohivx"]
 
-[ext_resource type="Script" path="res://card.gd" id="1_m1rxq"]
+[ext_resource type="Script" path="res://order.gd" id="1_m1rxq"]
 [ext_resource type="Theme" uid="uid://teb1pxbi0gcw" path="res://black.tres" id="2_gb7vd"]
 
 [node name="Card" type="Control"]
