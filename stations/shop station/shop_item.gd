@@ -4,11 +4,11 @@ class_name ShopItem
 @export var item_name:String
 @export var price:float
 @export var description:String
-@export var icon:ImageTexture
+@export var icon:Texture
 
 func _ready():
 	#set visual stuff to export var info
-	$Contents/Name.text = item_name
+	$Contents/Name.text = "[center]" + item_name + "[/center]"
 	$Contents/Cost.text = "$" + str(price)
 	$Contents/Description.text = description
 	$Icon.texture = icon

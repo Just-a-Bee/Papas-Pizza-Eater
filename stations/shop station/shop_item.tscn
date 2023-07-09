@@ -35,10 +35,11 @@ offset_top = 8.0
 offset_right = 160.0
 offset_bottom = 214.0
 size_flags_horizontal = 3
+theme_override_constants/separation = 0
 
 [node name="Name" type="RichTextLabel" parent="Contents"]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "[center]Name[/center]"
 fit_content = true
@@ -51,7 +52,7 @@ horizontal_alignment = 1
 
 [node name="Description" type="RichTextLabel" parent="Contents"]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 18
 text = "Write what the item does here probably yes "
 fit_content = true
 

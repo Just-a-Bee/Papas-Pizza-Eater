@@ -1,7 +1,7 @@
 extends Control
 class_name Card
 
-@onready var main = get_parent().get_parent().get_parent()
+@onready var main = get_parent()
 
 
 var number = 0 #order number
@@ -41,7 +41,7 @@ func hide_finish():
 	$Contents/FinishButton.hide()
 
 func _on_eat_button_button_up():
-	get_parent().get_parent().set_disable(true)
+	get_parent().side_bar.set_disable(true)
 	main.get_node("EatStation").generate_pizza(self)
 	$Contents/EatButton.hide()
 	show_finish()

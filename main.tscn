@@ -19,8 +19,8 @@ visible = false
 visible = false
 
 [node name="SideBar" parent="." instance=ExtResource("1_vmcy0")]
-offset_left = 576.0
-offset_right = 576.0
+offset_left = 480.0
+offset_right = 480.0
 
 [node name="CutScene" parent="." instance=ExtResource("5_w4buu")]
 visible = false
