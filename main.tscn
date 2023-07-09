@@ -23,6 +23,7 @@ visible = false
 visible = false
 
 [node name="SideBar" parent="." instance=ExtResource("1_vmcy0")]
+z_index = 2
 offset_left = 480.0
 offset_right = 480.0
 

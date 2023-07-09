@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dce7ur7u6i38w"]
+[gd_scene load_steps=10 format=3 uid="uid://dce7ur7u6i38w"]
 
 [ext_resource type="Script" path="res://stations/eat station/eat_station.gd" id="1_5820f"]
 [ext_resource type="Texture2D" uid="uid://dfj71qw1jj1of" path="res://assets/crawl frames/crawl-1.png" id="2_cjkhx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cpoqfeaybgvfa" path="res://assets/crawl frames/crawl-3.png" id="4_lfko3"]
 [ext_resource type="Texture2D" uid="uid://dqvrw6x6y5bm6" path="res://assets/crawl frames/crawl-4.png" id="5_xws06"]
 [ext_resource type="Script" path="res://stations/eat station/player.gd" id="6_wn6uu"]
+[ext_resource type="Texture2D" uid="uid://bwbj6up02y3ye" path="res://assets/eat_bg.png" id="7_horvi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l0xyn"]
 animations = [{
@@ -35,7 +36,7 @@ script = ExtResource("1_5820f")
 
 [node name="Player" type="AnimatedSprite2D" parent="."]
 z_index = 1
-position = Vector2(312, 448)
+position = Vector2(320, 564)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_l0xyn")
 animation = &"Crawl"
@@ -46,3 +47,7 @@ script = ExtResource("6_wn6uu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
 position = Vector2(-10.6667, -74.6667)
 shape = SubResource("CircleShape2D_41dfa")
+
+[node name="EatBg" type="Sprite2D" parent="."]
+position = Vector2(384, 256)
+texture = ExtResource("7_horvi")
