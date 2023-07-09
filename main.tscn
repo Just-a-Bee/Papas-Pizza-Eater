@@ -18,9 +18,9 @@ visible = false
 [node name="ShopStation" parent="." instance=ExtResource("4_j7aoj")]
 visible = false
 
+[node name="CutScene" parent="." instance=ExtResource("5_w4buu")]
+visible = false
+
 [node name="SideBar" parent="." instance=ExtResource("1_vmcy0")]
 offset_left = 480.0
 offset_right = 480.0
-
-[node name="CutScene" parent="." instance=ExtResource("5_w4buu")]
-visible = false

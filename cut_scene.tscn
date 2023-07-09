@@ -1,15 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc7bw4s681agd"]
+[gd_scene load_steps=4 format=3 uid="uid://cc7bw4s681agd"]
 
 [ext_resource type="Script" path="res://cut_scene.gd" id="1_8dy15"]
-[ext_resource type="Texture2D" uid="uid://dr2gmemkok0iu" path="res://assets/cut scene.png" id="1_y3tlo"]
+[ext_resource type="Texture2D" uid="uid://d55odf7ffmmv" path="res://assets/cutscene assets/cutscene bg.png" id="2_b8ma3"]
+[ext_resource type="Texture2D" uid="uid://cx1vwb7bti3c2" path="res://assets/cutscene assets/cutscene counter.png" id="3_wtalq"]
 
 [node name="CutScene" type="Node2D"]
 script = ExtResource("1_8dy15")
 
 [node name="bg" type="Sprite2D" parent="."]
-scale = Vector2(0.492091, 0.948148)
-texture = ExtResource("1_y3tlo")
+scale = Vector2(1, 1)
+texture = ExtResource("2_b8ma3")
 centered = false
+
+[node name="fg" type="Sprite2D" parent="."]
+position = Vector2(384, 256)
+scale = Vector2(1, 1)
+texture = ExtResource("3_wtalq")
 
 [node name="PercentScore" type="Label" parent="."]
 visible = false
