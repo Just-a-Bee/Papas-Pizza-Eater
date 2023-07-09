@@ -54,3 +54,5 @@ layout_mode = 2
 theme_override_font_sizes/normal_font_size = 20
 text = "Write what the item does here probably yes "
 fit_content = true
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
