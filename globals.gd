@@ -8,7 +8,8 @@ var topping_sprites_dict = {
 
 var pizza_diam = 424
 
-var money:float = 0
+var money:float = 0 : set = set_money
+signal money_changed
 
 #player stats
 var crawl_speed = 100
@@ -18,3 +19,7 @@ var eat_area = 20
 var right_turn_multi = 1
 var left_turn_multi = 1
 
+func set_money(new_money):
+	money = new_money
+	money_changed.emit(money)
+	
