@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://k7aq1yo2qvd1"]
+[gd_scene load_steps=7 format=3 uid="uid://k7aq1yo2qvd1"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_ukqnd"]
 [ext_resource type="PackedScene" uid="uid://ddimem50csu6i" path="res://side_bar.tscn" id="1_vmcy0"]
 [ext_resource type="PackedScene" uid="uid://ek8qjov70eh0" path="res://stations/order station/order_station.tscn" id="2_6sbrm"]
+[ext_resource type="PackedScene" uid="uid://djdvdr7l5c46y" path="res://stations/shop station/shop_station.tscn" id="4_j7aoj"]
 [ext_resource type="PackedScene" uid="uid://dce7ur7u6i38w" path="res://stations/eat station/eat_station.tscn" id="5_ulm0q"]
 [ext_resource type="PackedScene" uid="uid://cc7bw4s681agd" path="res://cut_scene.tscn" id="5_w4buu"]
 
@@ -12,6 +13,9 @@ script = ExtResource("1_ukqnd")
 [node name="OrderStation" parent="." instance=ExtResource("2_6sbrm")]
 
 [node name="EatStation" parent="." instance=ExtResource("5_ulm0q")]
+visible = false
+
+[node name="ShopStation" parent="." instance=ExtResource("4_j7aoj")]
 visible = false
 
 [node name="SideBar" parent="." instance=ExtResource("1_vmcy0")]
