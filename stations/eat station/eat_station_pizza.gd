@@ -7,7 +7,7 @@ var can_eat = false
 var percent_to_eat
 
 var topping_to_eat_dict
-var toppings_eaten_dict = {}
+var toppings_eaten_dict = {"mushroom" = 0, "pepperoni" = 0, "pepper" = 0}
 
 var expected_time
 var time_eaten = 0
@@ -48,8 +48,18 @@ func add_topping(topping_name):
 #function to grade the pizza based on desired state returns an array of three grades
 func grade():
 	var percent_grade = 100
-	var toppings_grade = 100
-	var time_grade = 100
 	
+	#calc toppings grade
+	var toppings_grade = 100
+	var toppings_off = 0
+	for topping in topping_to_eat_dict.keys():
+		toppings_off += abs(topping_to_eat_dict[topping] - toppings_eaten_dict[topping])
+	toppings_grade -= toppings_off * 10
+	
+	#calc time grade
+	var time_grade = 100
+	var time_off = time_eaten - expected_time
+	if time_off > 0:
+		time_grade -= time_off
 	
 	return [percent_grade, toppings_grade, time_grade]

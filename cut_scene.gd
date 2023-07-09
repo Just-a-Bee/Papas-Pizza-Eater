@@ -16,5 +16,8 @@ func grade_pizza(pizza_grades):
 	
 	await get_tree().create_timer(3).timeout
 	self.hide()
+	$PercentScore.hide()
+	$ToppingScore.hide()
+	$TimeScore.hide()
 	side_bar.set_disable(false)
 	main.change_station(main.STATIONS.ORDER)

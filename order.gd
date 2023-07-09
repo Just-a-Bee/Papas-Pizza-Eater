@@ -6,8 +6,8 @@ class_name Card
 
 var number = 0 #order number
 var percent_to_eat = 100 #percent of pizza to eat
-var topping_to_eat_dict = {"mushroom" = 4, "pepperoni" = 2}
-var topping_total_dict = {"mushroom" = 8, "pepperoni" = 8}
+var topping_to_eat_dict = {"mushroom" = 4, "pepperoni" = 2, "pepper" = 0}
+var topping_total_dict = {"mushroom" = 8, "pepperoni" = 8, "pepper" = 0}
 var expected_time = 60
 
 signal contents_displayed
