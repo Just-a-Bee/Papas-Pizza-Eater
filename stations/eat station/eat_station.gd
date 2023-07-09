@@ -25,7 +25,11 @@ func station_closed():
 func generate_pizza(topping_total_dict):
 	var new_pizza = pizza.instantiate()
 	new_pizza.position = PIZZA_START
-	#give it toppings
+	
+	for topping in topping_total_dict.keys():
+		for n in topping_total_dict[topping]:
+			new_pizza.spawn_topping(topping)
+	
 	add_child(new_pizza)
 	var tween = get_tree().create_tween()
 	tween.tween_property(new_pizza, "position", PIZZA_POSITION, 1)
