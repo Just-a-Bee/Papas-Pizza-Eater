@@ -97,3 +97,11 @@ script = null
 [node name="HungeringPizza" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
 script = null
+
+[node name="CurrentMoney" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 392.0
+offset_right = 499.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 40
+text = "Money: $000"

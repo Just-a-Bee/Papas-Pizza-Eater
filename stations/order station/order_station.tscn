@@ -13,6 +13,6 @@ centered = false
 
 [node name="Trophy" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(160, 192)
-scale = Vector2(0.226563, 0.226562)
+position = Vector2(159, 189)
+scale = Vector2(0.550781, 0.519531)
 texture = ExtResource("3_vfr11")
