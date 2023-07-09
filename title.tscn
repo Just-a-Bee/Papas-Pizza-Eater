@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpm5bc7orq4k5"]
+
+[ext_resource type="Texture2D" uid="uid://bqyiejvmgn51d" path="res://assets/title.png" id="1_kf5j0"]
+[ext_resource type="Script" path="res://title.gd" id="1_xmchd"]
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xmchd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(382.875, 255.25)
+scale = Vector2(0.676845, 0.950926)
+texture = ExtResource("1_kf5j0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 256.0
+offset_right = 576.0
+offset_bottom = 448.0
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+
+[connection signal="button_up" from="VBoxContainer/Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="VBoxContainer/Credits" to="." method="_on_credits_button_up"]
