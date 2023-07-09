@@ -14,8 +14,9 @@ var time_eaten = 0
 
 var topping = preload("res://pizza_topping.tscn")
 
-func _ready():
+func _init():
 	mask.load("res://assets/pizza_alpha.png")
+	material.set_shader_parameter("mask", ImageTexture.create_from_image(mask))
 #adds time to the time its taken to eat pizza, and eats pizza arond the player's head
 func _process(delta):
 	if can_eat:

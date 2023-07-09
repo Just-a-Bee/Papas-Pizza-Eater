@@ -40,11 +40,13 @@ func generate_pizza(order):
 	new_pizza.can_eat = true
 
 func finish_pizza():
-	var pizza_grades = $Pizza.grade()
-	$Pizza.can_eat = false
+	var current_pizza = $Pizza
+	var pizza_grades = current_pizza.grade()
+	current_pizza.can_eat = false
 	side_bar.set_disable(true)
 	var tween = get_tree().create_tween()
-	tween.tween_property($Pizza, "position", PIZZA_END, 1)
+	tween.tween_property(current_pizza, "position", PIZZA_END, 1)
 	await tween.finished
-	remove_child($Pizza)
+	remove_child(current_pizza)
+	current_pizza.queue_free()
 	main.cut_scene.grade_pizza(pizza_grades)
