@@ -5,23 +5,29 @@ class_name Card
 
 
 var number = 0 #order number
-var percent_to_eat = 50 #percent of pizza to eat
-var topping_to_eat_dict = {"mushroom" = 4, "pepperoni" = 2, "pepper" = 0}
+var percent_to_eat = randi_range(2, 8)*10 #percent of pizza to eat
 var topping_total_dict = {"mushroom" = 6, "pepperoni" = 4, "pepper" = 2}
-var expected_time = 10
+var topping_to_eat_dict = {"mushroom" = 4, "pepperoni" = 2, "pepper" = 0}
+
+var expected_time = percent_to_eat * 10
 
 signal contents_displayed
 
 #on ready populate text with variable data
 func _ready():
+	for topping in topping_to_eat_dict.keys():
+		topping_to_eat_dict[topping] = randi_range(0, topping_total_dict[topping])
+	
+	
 	$Contents/Labels/Number.text += str(number)
 	$Contents/Labels/Percent.text += str(percent_to_eat)
 	for topping in topping_to_eat_dict.keys():
-		var topping_label = Label.new()
-		topping_label.text = topping + ": " + str(topping_to_eat_dict[topping])
-		topping_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		topping_label.visible = false
-		$Contents/Labels.add_child(topping_label)
+		if topping_to_eat_dict[topping] > 0:
+			var topping_label = Label.new()
+			topping_label.text = topping + ": " + str(topping_to_eat_dict[topping])
+			topping_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+			topping_label.visible = false
+			$Contents/Labels.add_child(topping_label)
 	display_contents()
 
 func display_contents():

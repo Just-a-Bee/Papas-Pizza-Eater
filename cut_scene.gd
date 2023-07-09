@@ -23,4 +23,7 @@ func grade_pizza(pizza_grades):
 	$ToppingScore.hide()
 	$TimeScore.hide()
 	side_bar.set_disable(false)
+	main.get_node("OrderStation").remove_child(main.get_node("OrderStation").current_customer)
+	main.get_node("OrderStation").current_customer.queue_free()
 	main.change_station(main.STATIONS.ORDER)
+	main.get_node("OrderStation").spawn_customer()

@@ -7,6 +7,7 @@ var current_customer = null
 var customer = preload("res://customer.tscn")
 var order = preload("res://order.tscn")
 
+var order_number = 0
 
 const CUSTOMER_SPAWN_POS = Vector2(700, 220)
 const COUNTER_POS = Vector2(160, 220)
@@ -25,6 +26,8 @@ func station_closed():
 
 #function to spawn a new customer at the door
 func spawn_customer():
+	await get_tree().create_timer(randf_range(0,5)).timeout
+	order_number += 1
 	var new_customer = customer.instantiate()
 	new_customer.position = CUSTOMER_SPAWN_POS
 	add_child(new_customer)
@@ -34,6 +37,7 @@ func spawn_customer():
 func take_order():
 	main.show_cut_scene()
 	var new_order = order.instantiate()
+	new_order.number = order_number
 	new_order.position = main.ORDER_POS
 	get_parent().add_child(new_order)
 	side_bar.set_disable(true)
