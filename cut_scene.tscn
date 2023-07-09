@@ -1,10 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc7bw4s681agd"]
+[gd_scene load_steps=3 format=3 uid="uid://cc7bw4s681agd"]
 
+[ext_resource type="Script" path="res://cut_scene.gd" id="1_8dy15"]
 [ext_resource type="Texture2D" uid="uid://dr2gmemkok0iu" path="res://assets/cut scene.png" id="1_y3tlo"]
 
 [node name="CutScene" type="Node2D"]
+script = ExtResource("1_8dy15")
 
 [node name="bg" type="Sprite2D" parent="."]
 scale = Vector2(0.492091, 0.948148)
 texture = ExtResource("1_y3tlo")
 centered = false
+
+[node name="PercentScore" type="Label" parent="."]
+visible = false
+offset_left = 64.0
+offset_top = 480.0
+offset_right = 129.0
+offset_bottom = 506.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "% Score:"
+
+[node name="ToppingScore" type="Label" parent="."]
+visible = false
+offset_left = 208.0
+offset_top = 480.0
+offset_right = 322.0
+offset_bottom = 506.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Topping Score:"
+
+[node name="TimeScore" type="Label" parent="."]
+visible = false
+offset_left = 400.0
+offset_top = 480.0
+offset_right = 490.0
+offset_bottom = 506.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Time Score:"

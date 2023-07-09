@@ -42,7 +42,7 @@ func hide_finish():
 
 func _on_eat_button_button_up():
 	get_parent().get_parent().set_disable(true)
-	main.get_node("EatStation").generate_pizza(topping_total_dict)
+	main.get_node("EatStation").generate_pizza(self)
 	$Contents/EatButton.hide()
 	show_finish()
 
