@@ -14,4 +14,12 @@ func _ready():
 	$Icon.texture = icon
 
 func get_bought():
+	Globals.money -= price
+	do_effect()
+
+func _on_button_button_up():
+	if Globals.money >= price:
+		get_bought()
+
+func do_effect():
 	pass

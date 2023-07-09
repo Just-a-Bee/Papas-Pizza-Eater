@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://djdvdr7l5c46y"]
+[gd_scene load_steps=7 format=3 uid="uid://djdvdr7l5c46y"]
 
 [ext_resource type="Script" path="res://stations/shop station/shop_station.gd" id="1_qyg3d"]
 [ext_resource type="PackedScene" uid="uid://bd8rhgiotulfj" path="res://stations/shop station/shop_item.tscn" id="2_q1leq"]
+[ext_resource type="Script" path="res://eat_item.gd" id="3_whsnm"]
+[ext_resource type="Script" path="res://skateboard.gd" id="4_8k5gj"]
+[ext_resource type="Script" path="res://skateboard_left.gd" id="5_lilqy"]
+[ext_resource type="Script" path="res://trophy.gd" id="6_osqbx"]
 
 [node name="ShopStation" type="Node2D"]
 script = ExtResource("1_qyg3d")
@@ -18,63 +22,52 @@ columns = 3
 
 [node name="Fork" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
-item_name = "[center]Fork[/center]"
-price = 30.0
+script = ExtResource("3_whsnm")
+item_name = "Fork"
+price = 5.0
 description = "Helps you eat more pizza"
 
 [node name="Knife" parent="GridContainer" instance=ExtResource("2_q1leq")]
 visible = false
 layout_mode = 2
-item_name = "[center]Knife[/center]"
-price = 60.0
+script = ExtResource("3_whsnm")
+item_name = "Knife"
+price = 10.0
 description = "Helps you eat a lot more pizza"
 
 [node name="Spoon" parent="GridContainer" instance=ExtResource("2_q1leq")]
 visible = false
 layout_mode = 2
-item_name = "[center]Comically Large Spoon[/center]"
-price = 100.0
-description = "Helps you eat a comical amount of pizza"
+script = ExtResource("3_whsnm")
+item_name = "Comically Large Spoon"
+price = 30.0
+description = "Helps you eat a comically large amount of pizza"
 
 [node name="Skateboard" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
-item_name = "[center]Skateboard[/center]"
-price = 30.0
-description = "Makes you turn better, Wear a helmet"
+script = ExtResource("4_8k5gj")
 
 [node name="SkateboardLeft" parent="GridContainer" instance=ExtResource("2_q1leq")]
 visible = false
 layout_mode = 2
-item_name = "[center]Left Handed Skateboard[/center]"
-price = 60.0
-description = "Makes you turn left better, Wear two helmets"
+script = ExtResource("5_lilqy")
 
 [node name="Doorbell" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
-item_name = "[center]Doorbell[/center]"
-price = 5.0
-description = "Lets you know when a customer comes in"
+script = null
 
 [node name="PizzaEatingTrophy" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
-item_name = "[center]Pizza Eating Trophy[/center]"
-price = 500.0
-description = "Show off your pizza eating ability"
+script = ExtResource("6_osqbx")
 
 [node name="EnergizingPizza" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
-item_name = "[center]Energizing Pizza[/center]"
-price = 10.0
-description = "Boost your speed temporarily"
+script = null
 
 [node name="OilyPizza" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
-item_name = "[center]Oily Pizza[/center]"
-price = 15.0
-description = "Boost your turning temporarily"
+script = null
 
 [node name="HungeringPizza" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
-item_name = "[center]Hungering Pizza[/center]"
-price = 15.0
-description = "Eat more pizza temporarily"
+script = null

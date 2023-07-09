@@ -7,3 +7,5 @@ Shop
 Cutscenes Assets and animation
 
 Customer instancing
+
+customer assets in order station
