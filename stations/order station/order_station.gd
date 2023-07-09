@@ -34,7 +34,8 @@ func spawn_customer():
 func take_order():
 	main.show_cut_scene()
 	var new_order = order.instantiate()
-	side_bar.get_node("VBoxContainer").add_child(new_order)
+	new_order.position = main.ORDER_POS
+	get_parent().add_child(new_order)
 	side_bar.set_disable(true)
 	await new_order.contents_displayed
 	main.hide_cut_scene()

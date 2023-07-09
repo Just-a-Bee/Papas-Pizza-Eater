@@ -8,9 +8,12 @@ enum STATIONS
 }
 
 @onready var cut_scene = $CutScene
+@onready var side_bar = $SideBar
 @onready var station_arr = [$OrderStation, $EatStation, $ShopStation] #array of all stations, indexes are in enum
 @onready var current_station = $OrderStation
 var current_order = null
+
+const ORDER_POS = Vector2(568, 104)
 
 #function to change station, new station is an int from the station enum
 func change_station(new_station):

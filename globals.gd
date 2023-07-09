@@ -15,3 +15,6 @@ var crawl_speed = 100
 var turn_speed = PI/2
 var slow_turn_speed = PI/8
 var eat_area = 30
+var right_turn_multi = 1
+var left_turn_multi = 1
+

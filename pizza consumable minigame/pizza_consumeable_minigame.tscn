@@ -17,6 +17,6 @@ script = ExtResource("2_cy5q6")
 
 [node name="slice" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_1csnk")
-position = Vector2(568, 442)
+position = Vector2(360, 256)
 texture = ExtResource("4_slbxe")
 script = ExtResource("5_s2rb0")
