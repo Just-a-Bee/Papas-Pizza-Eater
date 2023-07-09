@@ -1,11 +1,13 @@
 extends Node2D
 
 var customer_sprites = [preload("res://assets/customers/robot-customer/robot-customer-base.png"), preload("res://assets/customers/grandma-customer/grandma-base.png")]
-
-
+var customer_names = ["robot", "grandma"]
+var customer_type
 
 func _ready():
-	$Sprite2D.texture = customer_sprites[randi_range(0, customer_sprites.size()-1)]
+	var customer = randi_range(0, customer_sprites.size()-1)
+	$Sprite2D.texture = customer_sprites[customer]
+	customer_type = customer_names[customer]
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "position", get_parent().COUNTER_POS, randf_range(2.5,3))
 	await tween.finished
