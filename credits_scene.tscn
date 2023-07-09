@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://ow04bs5vjcof"]
+
+[ext_resource type="Script" path="res://credits_scene.gd" id="1_7mmqe"]
+[ext_resource type="Texture2D" uid="uid://bk5rv58o1o02h" path="res://assets/credits-bg.png" id="2_upsus"]
+
+[node name="credits_scene" type="Node2D"]
+script = ExtResource("1_7mmqe")
+
+[node name="Credits-bg" type="Sprite2D" parent="."]
+texture = ExtResource("2_upsus")
+centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 762.0
+offset_bottom = 507.0
+bbcode_enabled = true
+text = "[center]
+[font_size=35]Papa's Pizza Eater
+A game by Abby Smith + Isaiah Sugar
+[/font_size]
+[font_size=24]
+made with Godot game engine!
+art made with Gimp + Blender
+[/font_size]
+
+
+[font_size=17]asset sources:
+cutout shader by Hephep, https://godotshaders.com/shader/cut-out-shader/
+crumpled paper texture, by Pink Sherbert Photography, CC attribution
+urban cymbal 01, by musicradar, royalty free
+
+
+[/font_size]
+
+"
+
+[node name="to_menu" type="Button" parent="."]
+offset_left = 298.0
+offset_top = 444.0
+offset_right = 426.0
+offset_bottom = 475.0
+text = "back to menu :)"
+
+[connection signal="button_up" from="to_menu" to="." method="_on_to_menu_button_up"]

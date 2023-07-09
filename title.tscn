@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpm5bc7orq4k5"]
+[gd_scene load_steps=5 format=3 uid="uid://dpm5bc7orq4k5"]
 
 [ext_resource type="Texture2D" uid="uid://bqyiejvmgn51d" path="res://assets/title.png" id="1_kf5j0"]
 [ext_resource type="Script" path="res://title.gd" id="1_xmchd"]
-[ext_resource type="AudioStream" uid="uid://keqsasajbfcr" path="res://assets/sound/papa pizza eater title screen.mp3" id="3_bc7b4"]
+[ext_resource type="AudioStream" uid="uid://dsjfgflhourls" path="res://assets/sound/papa pizza eater title screen.mp3" id="3_bc7b4"]
+[ext_resource type="PackedScene" uid="uid://ow04bs5vjcof" path="res://credits_scene.tscn" id="4_u1nf6"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -17,18 +18,21 @@ script = ExtResource("1_xmchd")
 position = Vector2(424, 256)
 texture = ExtResource("1_kf5j0")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 192.0
-offset_top = 256.0
-offset_right = 576.0
-offset_bottom = 448.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Sprite2D"]
+offset_left = -232.0
+offset_right = 152.0
+offset_bottom = 192.0
 
-[node name="Play" type="Button" parent="VBoxContainer"]
+[node name="Play" type="Button" parent="Sprite2D/VBoxContainer"]
 layout_mode = 2
 text = "Play"
 
-[node name="Credits" type="Button" parent="VBoxContainer"]
+[node name="minigame" type="Button" parent="Sprite2D/VBoxContainer"]
+layout_mode = 2
+text = "Minigame
+"
+
+[node name="Credits" type="Button" parent="Sprite2D/VBoxContainer"]
 layout_mode = 2
 text = "Credits"
 
@@ -36,5 +40,9 @@ text = "Credits"
 stream = ExtResource("3_bc7b4")
 autoplay = true
 
-[connection signal="button_up" from="VBoxContainer/Play" to="." method="_on_play_button_up"]
-[connection signal="button_up" from="VBoxContainer/Credits" to="." method="_on_credits_button_up"]
+[node name="credits_scene" parent="." instance=ExtResource("4_u1nf6")]
+visible = false
+
+[connection signal="button_up" from="Sprite2D/VBoxContainer/Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="Sprite2D/VBoxContainer/minigame" to="." method="_on_minigame_button_up"]
+[connection signal="button_up" from="Sprite2D/VBoxContainer/Credits" to="." method="_on_credits_button_up"]
