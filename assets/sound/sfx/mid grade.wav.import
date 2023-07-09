@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dsklv0vhwdn28"
+path="res://.godot/imported/mid grade.wav-3c0283da794341e7448243de0f9d1e49.sample"
+
+[deps]
+
+source_file="res://assets/sound/sfx/mid grade.wav"
+dest_files=["res://.godot/imported/mid grade.wav-3c0283da794341e7448243de0f9d1e49.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

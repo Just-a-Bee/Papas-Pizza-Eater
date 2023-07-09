@@ -86,18 +86,6 @@ item_name = "Pizza Eating Trophy"
 description = "Show off your pizza eating skills"
 icon = ExtResource("14_oxa7b")
 
-[node name="EnergizingPizza" parent="GridContainer" instance=ExtResource("2_q1leq")]
-layout_mode = 2
-script = null
-
-[node name="OilyPizza" parent="GridContainer" instance=ExtResource("2_q1leq")]
-layout_mode = 2
-script = null
-
-[node name="HungeringPizza" parent="GridContainer" instance=ExtResource("2_q1leq")]
-layout_mode = 2
-script = null
-
 [node name="CurrentMoney" type="Label" parent="."]
 offset_left = 256.0
 offset_top = 392.0

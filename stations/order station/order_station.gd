@@ -8,7 +8,7 @@ var customer = preload("res://customer.tscn")
 var order = preload("res://order.tscn")
 
 var order_number = 0
-var do_doorbell = false
+var play_doorbell = false
 
 
 const CUSTOMER_SPAWN_POS = Vector2(700, 304)
@@ -29,8 +29,8 @@ func station_closed():
 #function to spawn a new customer at the door
 func spawn_customer():
 	await get_tree().create_timer(randf_range(0,5)).timeout
-	if do_doorbell:
-		pass
+	if play_doorbell:
+		$Doorbell.play()
 	order_number += 1
 	var new_customer = customer.instantiate()
 	new_customer.position = CUSTOMER_SPAWN_POS
