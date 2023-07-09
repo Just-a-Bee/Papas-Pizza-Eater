@@ -21,7 +21,7 @@ func _process(delta):
 	if can_eat:
 		time_eaten += delta
 		var head_pos = player.position + Vector2(0, -50).rotated(player.rotation)
-		var eat_rect = Rect2i(head_pos.x-15 - position.x, head_pos.y-15 - position.y, 30, 30)
+		var eat_rect = Rect2i(head_pos.x-Globals.eat_area/2 - position.x, head_pos.y-Globals.eat_area/2 - position.y, Globals.eat_area, Globals.eat_area)
 		mask.fill_rect(eat_rect, Color.BLACK)
 		material.set_shader_parameter("mask", ImageTexture.create_from_image(mask))
 #function to spawn a topping at a random positoin

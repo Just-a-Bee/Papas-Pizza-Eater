@@ -9,3 +9,9 @@ var topping_sprites_dict = {
 var pizza_diam = 424
 
 var money:float = 0
+
+#player stats
+var crawl_speed = 100
+var turn_speed = PI/2
+var slow_turn_speed = PI/8
+var eat_area = 30
