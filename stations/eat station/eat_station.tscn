@@ -35,7 +35,7 @@ script = ExtResource("1_5820f")
 
 [node name="Player" type="AnimatedSprite2D" parent="."]
 z_index = 1
-position = Vector2(312, 448)
+position = Vector2(320, 564)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_l0xyn")
 animation = &"Crawl"

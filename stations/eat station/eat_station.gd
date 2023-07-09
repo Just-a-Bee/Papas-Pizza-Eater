@@ -8,6 +8,7 @@ var pizza = preload("res://stations/eat station/eat_station_pizza.tscn")
 const PIZZA_START = Vector2(-300, 48)
 const PIZZA_POSITION = Vector2(88, 48)
 const PIZZA_END = Vector2(600, 48)
+const PLAYER_START = Vector2(320, 564)
 
 func _ready():
 	$Player.set_process(false)
@@ -23,6 +24,8 @@ func station_closed():
 		main.current_order.hide_eat()
 
 func generate_pizza(order):
+	$Player.position = PLAYER_START
+	$Player.rotation = 0
 	var new_pizza = pizza.instantiate()
 	new_pizza.position = PIZZA_START
 	
