@@ -5,10 +5,10 @@ class_name Card
 
 
 var number = 0 #order number
-var percent_to_eat = 100 #percent of pizza to eat
+var percent_to_eat = 50 #percent of pizza to eat
 var topping_to_eat_dict = {"mushroom" = 4, "pepperoni" = 2, "pepper" = 0}
-var topping_total_dict = {"mushroom" = 8, "pepperoni" = 8, "pepper" = 0}
-var expected_time = 60
+var topping_total_dict = {"mushroom" = 6, "pepperoni" = 4, "pepper" = 2}
+var expected_time = 10
 
 signal contents_displayed
 
@@ -27,7 +27,7 @@ func _ready():
 func display_contents():
 	for item in $Contents/Labels.get_children():
 		item.show()
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(.01).timeout
 	contents_displayed.emit()
 
 

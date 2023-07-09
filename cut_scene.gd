@@ -4,8 +4,8 @@ extends Node2D
 @onready var side_bar = get_parent().get_node("SideBar")
 
 func grade_pizza(pizza_grades):
-	main.remove_child(main.current_order)
 	main.current_order.queue_free()
+	main.current_order = null
 	self.show()
 	$PercentScore.text = "% Score: " + str(pizza_grades[0])
 	$PercentScore.show()
@@ -13,6 +13,9 @@ func grade_pizza(pizza_grades):
 	$ToppingScore.show()
 	$TimeScore.text = "Time Score: " + str(pizza_grades[2])
 	$TimeScore.show()
+	var avg_pizza_grade = (pizza_grades[0] + pizza_grades[1] + pizza_grades[2])/3
+	Globals.money += 35 * avg_pizza_grade / 100
+	print(Globals.money)
 	
 	await get_tree().create_timer(3).timeout
 	self.hide()
