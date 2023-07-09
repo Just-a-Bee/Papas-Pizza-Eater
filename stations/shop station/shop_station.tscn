@@ -83,6 +83,7 @@ icon = ExtResource("12_d4fn7")
 layout_mode = 2
 script = ExtResource("6_osqbx")
 item_name = "Pizza Eating Trophy"
+price = 500.0
 description = "Show off your pizza eating skills"
 icon = ExtResource("14_oxa7b")
 
