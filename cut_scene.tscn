@@ -1,19 +1,40 @@
-[gd_scene load_steps=9 format=3 uid="uid://cc7bw4s681agd"]
+[gd_scene load_steps=13 format=3 uid="uid://cc7bw4s681agd"]
 
 [ext_resource type="Script" path="res://cut_scene.gd" id="1_8dy15"]
+[ext_resource type="AudioStream" uid="uid://c5ql5ya2splac" path="res://assets/sound/sfx/good grade.wav" id="2_47xfc"]
 [ext_resource type="Texture2D" uid="uid://d55odf7ffmmv" path="res://assets/cutscene assets/cutscene bg.png" id="2_b8ma3"]
 [ext_resource type="Texture2D" uid="uid://donctun1n3xi4" path="res://assets/cutscene assets/cutscene robot.png" id="3_rh3ow"]
 [ext_resource type="Texture2D" uid="uid://cx1vwb7bti3c2" path="res://assets/cutscene assets/cutscene counter.png" id="3_wtalq"]
+[ext_resource type="AudioStream" uid="uid://dsklv0vhwdn28" path="res://assets/sound/sfx/mid grade.wav" id="3_x7tpl"]
+[ext_resource type="AudioStream" uid="uid://d1hjppegxq5lp" path="res://assets/sound/sfx/bad grade.wav" id="4_h7b3p"]
 [ext_resource type="Texture2D" uid="uid://6v5uvsusvusa" path="res://assets/cutscene assets/cutscene grama.png" id="4_ndk3u"]
 [ext_resource type="Texture2D" uid="uid://b7o0nrdihb317" path="res://assets/cutscene assets/money jar_back.png" id="4_poael"]
 [ext_resource type="Texture2D" uid="uid://1trosb67cgs8" path="res://assets/cutscene assets/money.png" id="5_kwqmy"]
+[ext_resource type="AudioStream" uid="uid://dgomnblp0yxdx" path="res://assets/sound/sfx/drumroll+cymbal.wav" id="5_pcvw8"]
 [ext_resource type="Texture2D" uid="uid://ddve8s2n2jul4" path="res://assets/cutscene assets/money jar.png" id="6_7okwa"]
 
 [node name="CutScene" type="Node2D"]
 script = ExtResource("1_8dy15")
 
+[node name="GoodGrade" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(440, 304)
+scale = Vector2(0.5, 0.5)
+stream = ExtResource("2_47xfc")
+
+[node name="MedGrade" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(440, 304)
+scale = Vector2(0.5, 0.5)
+stream = ExtResource("3_x7tpl")
+
+[node name="BadGrade" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(440, 304)
+scale = Vector2(0.5, 0.5)
+stream = ExtResource("4_h7b3p")
+
+[node name="Drumroll" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_pcvw8")
+
 [node name="bg" type="Sprite2D" parent="."]
-scale = Vector2(1, 1)
 texture = ExtResource("2_b8ma3")
 centered = false
 
@@ -29,7 +50,6 @@ texture = ExtResource("4_ndk3u")
 
 [node name="fg" type="Sprite2D" parent="."]
 position = Vector2(384, 256)
-scale = Vector2(1, 1)
 texture = ExtResource("3_wtalq")
 
 [node name="PercentScore" type="Label" parent="."]

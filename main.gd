@@ -30,3 +30,7 @@ func show_cut_scene():
 func hide_cut_scene():
 	$CutScene.hide()
 
+func pause_music():
+	$Music.stop()
+func play_music():
+	$Music.play()

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vchs2l72p006"
+path="res://.godot/imported/papa pizza eater main loop.mp3-722a6a843fa46e6d449f5229125edd85.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/papa pizza eater main loop.mp3"
+dest_files=["res://.godot/imported/papa pizza eater main loop.mp3-722a6a843fa46e6d449f5229125edd85.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

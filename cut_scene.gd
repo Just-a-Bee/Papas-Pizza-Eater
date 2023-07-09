@@ -31,8 +31,10 @@ func grade_pizza(pizza_grades):
 	if order_station.current_customer.customer_type == "robot":
 		$Robot.show()
 	
+	main.pause_music()
 	self.show()
 	
+	$Drumroll.play()
 	await get_tree().create_timer(1).timeout
 	$PercentScore.show()
 	
@@ -41,6 +43,15 @@ func grade_pizza(pizza_grades):
 	
 	await get_tree().create_timer(.3).timeout
 	$TimeScore.show()
+	
+	if avg_pizza_grade > 80:
+		$GoodGrade.play()
+	elif avg_pizza_grade > 60:
+		$MedGrade.play()
+	else:
+		$BadGrade.play()
+	
+	
 	
 	await get_tree().create_timer(1).timeout
 	$Money.position = MONEY_START_POS
@@ -67,5 +78,5 @@ func grade_pizza(pizza_grades):
 	side_bar.set_disable(false)
 	main.get_node("OrderStation").remove_child(main.get_node("OrderStation").current_customer)
 	main.get_node("OrderStation").current_customer.queue_free()
-	
+	main.play_music()
 	main.get_node("OrderStation").spawn_customer()
