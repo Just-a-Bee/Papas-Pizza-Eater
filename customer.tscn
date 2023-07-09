@@ -12,6 +12,7 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_4efpx")
 
 [node name="SpeechBubble" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-96, -144)
 scale = Vector2(0.265625, 0.234375)
 texture = ExtResource("3_3o1t5")

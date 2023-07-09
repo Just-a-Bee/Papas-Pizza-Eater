@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://djdvdr7l5c46y"]
+[gd_scene load_steps=15 format=3 uid="uid://djdvdr7l5c46y"]
 
 [ext_resource type="Script" path="res://stations/shop station/shop_station.gd" id="1_qyg3d"]
 [ext_resource type="PackedScene" uid="uid://bd8rhgiotulfj" path="res://stations/shop station/shop_item.tscn" id="2_q1leq"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cynpll1txhesf" path="res://assets/upgrades/left-handed-skateboard.png" id="10_l7u4o"]
 [ext_resource type="Script" path="res://stations/shop station/doorbell_item.gd" id="11_0qu0q"]
 [ext_resource type="Texture2D" uid="uid://bb5iu4q02ftw7" path="res://assets/upgrades/doorbell.png" id="12_d4fn7"]
+[ext_resource type="Texture2D" uid="uid://cu2062v1pqj4p" path="res://assets/trophy.png" id="14_oxa7b"]
 
 [node name="ShopStation" type="Node2D"]
 script = ExtResource("1_qyg3d")
@@ -82,8 +83,8 @@ icon = ExtResource("12_d4fn7")
 layout_mode = 2
 script = ExtResource("6_osqbx")
 item_name = "Pizza Eating Trophy"
-price = 500.0
 description = "Show off your pizza eating skills"
+icon = ExtResource("14_oxa7b")
 
 [node name="EnergizingPizza" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
