@@ -1,4 +1,5 @@
 extends AnimatedSprite2D
+class_name Player
 
 var speed = 100
 var acceleration = 50
