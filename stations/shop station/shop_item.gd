@@ -8,7 +8,7 @@ class_name ShopItem
 
 func _ready():
 	#set visual stuff to export var info
-	$Contents/Name.text = name
+	$Contents/Name.text = item_name
 	$Contents/Cost.text = "$" + str(price)
 	$Contents/Description.text = description
 	$Icon.texture = icon
