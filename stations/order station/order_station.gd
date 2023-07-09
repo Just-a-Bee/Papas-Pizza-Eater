@@ -9,10 +9,10 @@ var order = preload("res://order.tscn")
 
 var order_number = 0
 
-const CUSTOMER_SPAWN_POS = Vector2(700, 220)
-const COUNTER_POS = Vector2(160, 220)
-const PICKUP_SPAWN_POS = Vector2(720, 180)
-const PICKUP_COUNTER_POS = Vector2(180, 180)
+const CUSTOMER_SPAWN_POS = Vector2(700, 304)
+const COUNTER_POS = Vector2(192, 304)
+const PICKUP_SPAWN_POS = Vector2(720, 224)
+const PICKUP_COUNTER_POS = Vector2(256, 224)
 
 func _ready():
 	spawn_customer()

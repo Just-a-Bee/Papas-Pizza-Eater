@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://djdvdr7l5c46y"]
+[gd_scene load_steps=14 format=3 uid="uid://djdvdr7l5c46y"]
 
 [ext_resource type="Script" path="res://stations/shop station/shop_station.gd" id="1_qyg3d"]
-[ext_resource type="PackedScene" uid="uid://bbirg73by4wl5" path="res://pizza consumable minigame/pizza_consumeable_minigame.tscn" id="2_hu7ya"]
 [ext_resource type="PackedScene" uid="uid://bd8rhgiotulfj" path="res://stations/shop station/shop_item.tscn" id="2_q1leq"]
 [ext_resource type="Script" path="res://eat_item.gd" id="3_whsnm"]
 [ext_resource type="Script" path="res://skateboard.gd" id="4_8k5gj"]
@@ -17,11 +16,6 @@
 
 [node name="ShopStation" type="Node2D"]
 script = ExtResource("1_qyg3d")
-
-[node name="pizza_consumeable_minigame" parent="." instance=ExtResource("2_hu7ya")]
-visible = false
-position = Vector2(184, 256)
-scale = Vector2(0.5, 0.5)
 
 [node name="GridContainer" type="GridContainer" parent="."]
 offset_left = 40.0

@@ -33,7 +33,7 @@ func _ready():
 func display_contents():
 	for item in $Contents/Labels.get_children():
 		item.show()
-		await get_tree().create_timer(.01).timeout
+		await get_tree().create_timer(1).timeout
 	contents_displayed.emit()
 
 

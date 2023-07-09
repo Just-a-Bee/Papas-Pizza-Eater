@@ -1,12 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsgcqon5y11yj"]
+[gd_scene load_steps=3 format=3 uid="uid://dsgcqon5y11yj"]
 
 [ext_resource type="Script" path="res://customer.gd" id="1_5ae37"]
+[ext_resource type="Texture2D" uid="uid://dubleqqbnuxog" path="res://assets/customers/robot-customer/robot-customer-base.png" id="2_4efpx"]
 
 [node name="Customer" type="Node2D"]
 script = ExtResource("1_5ae37")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(0, 0, 192, 0, 192, 192, 0, 192)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_4efpx")
 
 [node name="OrderButton" type="Button" parent="."]
 visible = false

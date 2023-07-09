@@ -16,6 +16,6 @@ func _process(delta):
 	if moving:
 		turn_tmp = Globals.slow_turn_speed
 	if Input.is_action_pressed("left"):
-		rotation -= turn_tmp*delta
+		rotation -= turn_tmp*delta*Globals.left_turn_multi
 	if Input.is_action_pressed("right"):
-		rotation += turn_tmp*delta
+		rotation += turn_tmp*delta*Globals.right_turn_multi

@@ -4,6 +4,8 @@ extends Node2D
 @onready var side_bar = get_parent().get_node("SideBar")
 
 func grade_pizza(pizza_grades):
+	main.change_station(main.STATIONS.ORDER)
+	main.remove_child(main.current_order)
 	main.current_order.queue_free()
 	main.current_order = null
 	self.show()
@@ -25,5 +27,5 @@ func grade_pizza(pizza_grades):
 	side_bar.set_disable(false)
 	main.get_node("OrderStation").remove_child(main.get_node("OrderStation").current_customer)
 	main.get_node("OrderStation").current_customer.queue_free()
-	main.change_station(main.STATIONS.ORDER)
+	
 	main.get_node("OrderStation").spawn_customer()
