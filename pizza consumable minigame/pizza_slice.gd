@@ -47,4 +47,4 @@ func checkComplete() -> bool:
 			if pixelCount <= pizza_finished_pixels:
 				return false
 	
-	return true #still need to come up with an implementation for this
+	return true 

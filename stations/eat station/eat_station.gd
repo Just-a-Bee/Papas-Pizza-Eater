@@ -22,22 +22,29 @@ func station_closed():
 	if main.current_order:
 		main.current_order.hide_eat()
 
-func generate_pizza(topping_total_dict):
+func generate_pizza(order):
 	var new_pizza = pizza.instantiate()
 	new_pizza.position = PIZZA_START
 	
-	for topping in topping_total_dict.keys():
-		for n in topping_total_dict[topping]:
+	for topping in order.topping_total_dict.keys():
+		for n in order.topping_total_dict[topping]:
 			new_pizza.spawn_topping(topping)
+	new_pizza.expected_time = order.expected_time
+	new_pizza.percent_to_eat = order.percent_to_eat
+	new_pizza.topping_to_eat_dict = order.topping_to_eat_dict
 	
 	add_child(new_pizza)
 	var tween = get_tree().create_tween()
 	tween.tween_property(new_pizza, "position", PIZZA_POSITION, 1)
+	await tween.finished
+	new_pizza.can_eat = true
 
 func finish_pizza():
+	var pizza_grades = $Pizza.grade()
+	$Pizza.can_eat = false
 	side_bar.set_disable(true)
 	var tween = get_tree().create_tween()
-	tween.tween_property($Pizza, "position", PIZZA_POSITION, 1)
+	tween.tween_property($Pizza, "position", PIZZA_END, 1)
 	await tween.finished
 	remove_child($Pizza)
-	#do the pizza returning cutscene!!
+	main.cut_scene.grade_pizza(pizza_grades)

@@ -7,6 +7,7 @@ enum STATIONS
 	SHOP = 2
 }
 
+@onready var cut_scene = $CutScene
 @onready var station_arr = [$OrderStation, $EatStation] #array of all stations, indexes are in enum
 @onready var current_station = $OrderStation
 var current_order = null

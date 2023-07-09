@@ -7,3 +7,5 @@ var topping_sprites_dict = {
 }
 
 var pizza_diam = 424
+
+var money:float = 0
