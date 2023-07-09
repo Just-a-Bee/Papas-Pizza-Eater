@@ -40,6 +40,7 @@ func spawn_customer():
 #function to take a customer's order
 func take_order():
 	main.show_cut_scene()
+	main.cut_scene.take_order()
 	var new_order = order.instantiate()
 	new_order.number = order_number
 	new_order.position = main.ORDER_POS
@@ -47,6 +48,7 @@ func take_order():
 	side_bar.set_disable(true)
 	await new_order.contents_displayed
 	main.hide_cut_scene()
+	main.cut_scene.stop_take_order()
 	side_bar.set_disable(false)
 	main.current_order = new_order
 	current_customer.go_to_pickup()
