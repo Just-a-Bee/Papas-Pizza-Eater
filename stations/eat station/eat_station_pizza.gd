@@ -15,7 +15,9 @@ var time_eaten = 0
 var topping = preload("res://pizza_topping.tscn")
 
 func _init():
-	mask.load("res://assets/pizza_alpha.png")
+	mask = load("res://assets/pizza_alpha.png")
+#	mask = Image.create(Globals.pizza_diam, Globals.pizza_diam, false, Image.FORMAT_RGBA8)
+#	mask.fill(Color.WHITE)
 	material.set_shader_parameter("mask", ImageTexture.create_from_image(mask))
 #adds time to the time its taken to eat pizza, and eats pizza arond the player's head
 func _process(delta):
@@ -24,7 +26,7 @@ func _process(delta):
 		var head_pos = player.position + Vector2(0, -50).rotated(player.rotation)
 		var eat_rect = Rect2i(head_pos.x-Globals.eat_area/2 - position.x, head_pos.y-Globals.eat_area/2 - position.y, Globals.eat_area, Globals.eat_area)
 		mask.fill_rect(eat_rect, Color.BLACK)
-		material.set_shader_parameter("mask", ImageTexture.create_from_image(mask))
+		material.set_shader_parameter("mask", ImageTexture.create_from_image(self.mask))
 #function to spawn a topping at a random positoin
 func spawn_topping(topping_name):
 	var new_topping = topping.instantiate()

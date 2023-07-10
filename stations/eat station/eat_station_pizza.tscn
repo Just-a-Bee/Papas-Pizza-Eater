@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://cjxb8sknwxub7" path="res://assets/pizza_base.png" id="1_ninag"]
 [ext_resource type="Shader" path="res://edible.gdshader" id="1_rcoel"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1xklt"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qc0ha"]
 shader = ExtResource("1_rcoel")
 
 [node name="Pizza" type="Sprite2D"]
-material = SubResource("ShaderMaterial_1xklt")
+material = SubResource("ShaderMaterial_qc0ha")
 scale = Vector2(0.828, 0.828)
 texture = ExtResource("1_ninag")
 centered = false

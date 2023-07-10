@@ -6,8 +6,10 @@ const res = 512
 const pizza_finished_pixels = res*res*PIZZA_FINISHED_THRESH
 
 var tmpImageTex = ImageTexture.new()
-var biteMask = Image.load_from_file("res://pizza consumable minigame/assets/bite.png")
-var mask = Image.load_from_file("res://pizza consumable minigame/assets/slice-alpha.png")
+var biteMask = load("res://pizza consumable minigame/assets/bite.png")
+
+
+var mask = load("res://pizza consumable minigame/assets/slice-alpha.png")
 
 
 # Called when the node enters the scene tree for the first time.
