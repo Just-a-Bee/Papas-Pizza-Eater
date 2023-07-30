@@ -14,6 +14,8 @@ var time_eaten = 0
 
 var topping = preload("res://pizza_topping.tscn")
 
+signal topping_eaten
+
 func _init():
 	mask = load("res://assets/pizza_alpha.png")
 #	mask = Image.create(Globals.pizza_diam, Globals.pizza_diam, false, Image.FORMAT_RGBA8)
@@ -46,6 +48,8 @@ func add_topping(topping_name):
 		toppings_eaten_dict[topping_name] += 1
 	else:
 		toppings_eaten_dict[topping_name] = 1
+	get_parent().update_topping_labels(toppings_eaten_dict)
+	
 
 #function to grade the pizza based on desired state returns an array of three grades
 func grade():

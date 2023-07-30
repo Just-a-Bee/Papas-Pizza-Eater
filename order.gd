@@ -9,7 +9,7 @@ var percent_to_eat = randi_range(2, 8)*10 #percent of pizza to eat
 var topping_total_dict = {"mushroom" = 6, "pepperoni" = 4, "pepper" = 2}
 var topping_to_eat_dict = {"mushroom" = 4, "pepperoni" = 2, "pepper" = 0}
 
-var expected_time = percent_to_eat * 10
+var expected_time = percent_to_eat / 2
 
 signal contents_displayed
 

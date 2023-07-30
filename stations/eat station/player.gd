@@ -7,6 +7,12 @@ func _process(delta):
 	if Input.is_action_pressed("up"):
 		position += Vector2(0, -Globals.crawl_speed).rotated(rotation)*delta
 		moving = true
+		speed_scale = 1
+		play("Crawl")
+	elif Input.is_action_pressed("down") and Globals.can_crawl_backwards:
+		position -= Vector2(0, -Globals.crawl_speed).rotated(rotation)*delta
+		moving = true
+		speed_scale = -1
 		play("Crawl")
 	else:
 		pause()

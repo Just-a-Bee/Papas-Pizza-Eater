@@ -18,6 +18,7 @@ var slow_turn_speed = PI/8
 var eat_area = 20
 var right_turn_multi = 1
 var left_turn_multi = 1
+var can_crawl_backwards = false
 
 func set_money(new_money):
 	money = new_money

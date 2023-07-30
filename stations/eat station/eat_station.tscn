@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dce7ur7u6i38w"]
+[gd_scene load_steps=13 format=3 uid="uid://dce7ur7u6i38w"]
 
 [ext_resource type="Script" path="res://stations/eat station/eat_station.gd" id="1_5820f"]
 [ext_resource type="Texture2D" uid="uid://dfj71qw1jj1of" path="res://assets/crawl frames/crawl-1.png" id="2_cjkhx"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://dqvrw6x6y5bm6" path="res://assets/crawl frames/crawl-4.png" id="5_xws06"]
 [ext_resource type="Script" path="res://stations/eat station/player.gd" id="6_wn6uu"]
 [ext_resource type="Texture2D" uid="uid://bwbj6up02y3ye" path="res://assets/eat_bg.png" id="7_horvi"]
+[ext_resource type="Texture2D" uid="uid://gxnbfbc8soev" path="res://assets/pepperoni.png" id="8_jqpo7"]
+[ext_resource type="Texture2D" uid="uid://da3mu51dsd1pr" path="res://assets/bell pepper.png" id="9_3vdl1"]
+[ext_resource type="Texture2D" uid="uid://busmf0omea03y" path="res://assets/mushroom.png" id="10_wptie"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l0xyn"]
 animations = [{
@@ -51,3 +54,43 @@ shape = SubResource("CircleShape2D_41dfa")
 [node name="EatBg" type="Sprite2D" parent="."]
 position = Vector2(384, 256)
 texture = ExtResource("7_horvi")
+
+[node name="PepperoniIcon" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_jqpo7")
+centered = false
+
+[node name="PepperIcon" type="Sprite2D" parent="."]
+position = Vector2(0, 50)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_3vdl1")
+centered = false
+
+[node name="MushroomIcon" type="Sprite2D" parent="."]
+position = Vector2(0, 100)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_wptie")
+centered = false
+
+[node name="PepperoniCount" type="Label" parent="."]
+offset_left = 56.0
+offset_right = 111.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 40
+text = "x 0"
+
+[node name="PepperCount" type="Label" parent="."]
+offset_left = 56.0
+offset_top = 50.0
+offset_right = 111.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 40
+text = "x 0"
+
+[node name="MushroomCount" type="Label" parent="."]
+offset_left = 56.0
+offset_top = 100.0
+offset_right = 111.0
+offset_bottom = 158.0
+theme_override_font_sizes/font_size = 40
+text = "x 0"

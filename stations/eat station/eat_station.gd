@@ -53,3 +53,8 @@ func finish_pizza():
 	remove_child(current_pizza)
 	current_pizza.queue_free()
 	main.cut_scene.grade_pizza(pizza_grades)
+
+func update_topping_labels(toppings_eaten_dict):
+	$PepperoniCount.text = "x " + str(toppings_eaten_dict["pepperoni"])
+	$PepperCount.text = "x " + str(toppings_eaten_dict["pepper"])
+	$MushroomCount.text = "x " + str(toppings_eaten_dict["mushroom"])

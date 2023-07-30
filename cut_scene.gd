@@ -24,7 +24,7 @@ func grade_pizza(pizza_grades):
 	$ToppingScore.text = "Topping Score: " + str(pizza_grades[1])
 	$TimeScore.text = "Time Score: " + str(pizza_grades[2])
 	var avg_pizza_grade = (pizza_grades[0] + pizza_grades[1] + pizza_grades[2])/3
-	var money_earned = 35 * avg_pizza_grade / 100
+	var money_earned:int = 20*(pizza_grades[0]/100.0)*(pizza_grades[2]/100.0) + pizza_grades[1]/10
 	Globals.money += money_earned
 	if order_station.current_customer.customer_type == "grandma":
 		$Grandma.show()
