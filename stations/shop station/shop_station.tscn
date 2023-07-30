@@ -34,7 +34,7 @@ columns = 2
 layout_mode = 2
 script = ExtResource("3_whsnm")
 item_name = "Fork"
-price = 5.0
+price = 10.0
 description = "Helps you eat more pizza"
 icon = ExtResource("4_sui45")
 
@@ -43,7 +43,7 @@ visible = false
 layout_mode = 2
 script = ExtResource("3_whsnm")
 item_name = "Knife"
-price = 10.0
+price = 15.0
 description = "Helps you eat a lot more pizza"
 icon = ExtResource("5_22wna")
 
@@ -81,16 +81,34 @@ price = 5.0
 description = "Hear your customers when they come in"
 icon = ExtResource("12_d4fn7")
 
-[node name="Slippery Napkin" parent="GridContainer" instance=ExtResource("2_q1leq")]
+[node name="SlipperyNapkin" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
 script = ExtResource("15_ielj3")
 item_name = "Slippery Napkin"
+price = 5.0
 description = "Sliding is fun! Helps you crawl faster."
+
+[node name="SlipperierNapkin" parent="GridContainer" instance=ExtResource("2_q1leq")]
+visible = false
+layout_mode = 2
+script = ExtResource("15_ielj3")
+item_name = "Slipperier Napkin"
+price = 20.0
+description = "Maybe too slippery."
+
+[node name="SlipperiestNapkin" parent="GridContainer" instance=ExtResource("2_q1leq")]
+visible = false
+layout_mode = 2
+script = ExtResource("15_ielj3")
+item_name = "Slipperiest Napkin"
+price = 30.0
+description = "So so slippery"
 
 [node name="PizzaKneepads" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
 script = ExtResource("14_bven4")
 item_name = "Pizza Kneepads"
+price = 30.0
 description = "Improves your grip on the pizza. Lets you crawl backwards!"
 
 [node name="PizzaEatingTrophy" parent="GridContainer" instance=ExtResource("2_q1leq")]
