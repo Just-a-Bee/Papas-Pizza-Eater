@@ -28,13 +28,12 @@ func eat(bitePosition):
 	
 	#convert to local coords
 	bitePosition -= self.position #idk why this is the offset but it works
-	print(bitePosition)
 	
 	#
 	mask.blend_rect(biteMask, Rect2i(0,0,512,512),bitePosition)
 	updateMask()
 	if checkComplete():
-		print("well it looks like you finished the pizza")
+		pass
 	
 func updateMask():
 	
