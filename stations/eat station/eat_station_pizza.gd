@@ -49,6 +49,7 @@ func add_topping(topping_name):
 	else:
 		toppings_eaten_dict[topping_name] = 1
 	get_parent().update_topping_labels(toppings_eaten_dict)
+	$Munch.play()
 	
 
 #function to grade the pizza based on desired state returns an array of three grades

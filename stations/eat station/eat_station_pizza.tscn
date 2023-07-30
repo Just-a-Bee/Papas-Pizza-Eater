@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqf1k606v7q7l"]
+[gd_scene load_steps=6 format=3 uid="uid://bqf1k606v7q7l"]
 
 [ext_resource type="Script" path="res://stations/eat station/eat_station_pizza.gd" id="1_kgy4b"]
 [ext_resource type="Texture2D" uid="uid://cjxb8sknwxub7" path="res://assets/pizza_base.png" id="1_ninag"]
 [ext_resource type="Shader" path="res://edible.gdshader" id="1_rcoel"]
+[ext_resource type="AudioStream" uid="uid://btopt2fsfjc88" path="res://assets/munch.mp3" id="4_sqoj6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qc0ha"]
 shader = ExtResource("1_rcoel")
@@ -13,3 +14,6 @@ scale = Vector2(0.828, 0.828)
 texture = ExtResource("1_ninag")
 centered = false
 script = ExtResource("1_kgy4b")
+
+[node name="Munch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_sqoj6")
