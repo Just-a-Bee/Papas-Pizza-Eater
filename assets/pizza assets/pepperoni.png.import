@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da3mu51dsd1pr"
-path="res://.godot/imported/bell pepper.png-83c70705a980027132c4eada661c1325.ctex"
+uid="uid://gxnbfbc8soev"
+path="res://.godot/imported/pepperoni.png-4666a154b197f3dfd62551d3aed87e81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bell pepper.png"
-dest_files=["res://.godot/imported/bell pepper.png-83c70705a980027132c4eada661c1325.ctex"]
+source_file="res://assets/pizza assets/pepperoni.png"
+dest_files=["res://.godot/imported/pepperoni.png-4666a154b197f3dfd62551d3aed87e81.ctex"]
 
 [params]
 

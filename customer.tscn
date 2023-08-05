@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsgcqon5y11yj"]
+[gd_scene load_steps=6 format=3 uid="uid://dsgcqon5y11yj"]
 
 [ext_resource type="Script" path="res://customer.gd" id="1_5ae37"]
 [ext_resource type="Texture2D" uid="uid://dubleqqbnuxog" path="res://assets/customers/robot-customer/robot-customer-base.png" id="2_4efpx"]
 [ext_resource type="Texture2D" uid="uid://xqne7pqk18jh" path="res://assets/bubble.png" id="3_3o1t5"]
+[ext_resource type="Texture2D" uid="uid://blrcocv3avje6" path="res://assets/take order button.png" id="4_884hr"]
+[ext_resource type="Texture2D" uid="uid://bmtpni4vormhk" path="res://assets/take order button pressed.png" id="5_pslrg"]
 
 [node name="Customer" type="Node2D"]
 script = ExtResource("1_5ae37")
@@ -13,16 +15,16 @@ texture = ExtResource("2_4efpx")
 
 [node name="SpeechBubble" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-96, -144)
+position = Vector2(-89, -132)
 scale = Vector2(0.265625, 0.234375)
 texture = ExtResource("3_3o1t5")
 
-[node name="OrderButton" type="Button" parent="SpeechBubble"]
-offset_left = -161.882
-offset_top = -59.7333
-offset_right = 170.118
-offset_bottom = 110.267
-theme_override_font_sizes/font_size = 53
-text = "Take Order!!"
+[node name="OrderButton" type="TextureButton" parent="SpeechBubble"]
+offset_left = -207.059
+offset_top = -72.5334
+offset_right = 187.941
+offset_bottom = 97.4669
+texture_normal = ExtResource("4_884hr")
+texture_pressed = ExtResource("5_pslrg")
 
 [connection signal="button_up" from="SpeechBubble/OrderButton" to="." method="_on_order_button_button_up"]

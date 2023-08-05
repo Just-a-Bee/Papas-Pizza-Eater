@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gxnbfbc8soev"
-path="res://.godot/imported/pepperoni.png-2f8896cb294edc3334b69283a6bc2380.ctex"
+uid="uid://dmmp1ej7es8o2"
+path="res://.godot/imported/shop button disabled.png-12784b0bd49074100066a387c14cdf40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pepperoni.png"
-dest_files=["res://.godot/imported/pepperoni.png-2f8896cb294edc3334b69283a6bc2380.ctex"]
+source_file="res://assets/ui/shop button disabled.png"
+dest_files=["res://.godot/imported/shop button disabled.png-12784b0bd49074100066a387c14cdf40.ctex"]
 
 [params]
 

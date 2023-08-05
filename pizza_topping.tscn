@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cb0o7geha84op"]
 
 [ext_resource type="Script" path="res://pizza_topping.gd" id="1_1i0lu"]
-[ext_resource type="Texture2D" uid="uid://busmf0omea03y" path="res://assets/mushroom.png" id="1_rqqwr"]
+[ext_resource type="Texture2D" uid="uid://busmf0omea03y" path="res://assets/pizza assets/mushroom.png" id="1_rqqwr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2t48a"]
 radius = 96.7241

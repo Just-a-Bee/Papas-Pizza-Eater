@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvhrtergt2y0v"
-path="res://.godot/imported/sidebar.png-5c307d276994d73e379603433076dddf.ctex"
+uid="uid://cevbvfgsglj6h"
+path="res://.godot/imported/eat button.png-e05db4d2fea949513e5327ad60d1ad0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sidebar.png"
-dest_files=["res://.godot/imported/sidebar.png-5c307d276994d73e379603433076dddf.ctex"]
+source_file="res://assets/ui/eat button.png"
+dest_files=["res://.godot/imported/eat button.png-e05db4d2fea949513e5327ad60d1ad0d.ctex"]
 
 [params]
 

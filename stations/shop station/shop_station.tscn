@@ -15,11 +15,11 @@
 [ext_resource type="Texture2D" uid="uid://bb5iu4q02ftw7" path="res://assets/upgrades/doorbell.png" id="12_d4fn7"]
 [ext_resource type="Texture2D" uid="uid://co0g8q4ek24sm" path="res://assets/upgrades/napkin 1.png" id="14_0yhmj"]
 [ext_resource type="Script" path="res://stations/shop station/pizza_kneepads.gd" id="14_bven4"]
-[ext_resource type="Texture2D" uid="uid://cu2062v1pqj4p" path="res://assets/trophy.png" id="14_oxa7b"]
 [ext_resource type="Texture2D" uid="uid://3rf7883jdy1p" path="res://assets/upgrades/napkin 2.png" id="15_6hc2e"]
 [ext_resource type="Script" path="res://stations/shop station/slippery_napkin.gd" id="15_ielj3"]
 [ext_resource type="Texture2D" uid="uid://cjpdtagutsnta" path="res://assets/upgrades/napkin 3.png" id="16_4yalm"]
 [ext_resource type="Texture2D" uid="uid://djjpeo47c0ep3" path="res://assets/upgrades/kneepad.png" id="18_eviuu"]
+[ext_resource type="Texture2D" uid="uid://cu2062v1pqj4p" path="res://assets/upgrades/trophy.png" id="20_kattj"]
 
 [node name="ShopStation" type="Node2D"]
 script = ExtResource("1_qyg3d")
@@ -125,7 +125,7 @@ script = ExtResource("6_osqbx")
 item_name = "Pizza Eating Trophy"
 price = 500.0
 description = "Show off your pizza eating skills"
-icon = ExtResource("14_oxa7b")
+icon = ExtResource("20_kattj")
 
 [node name="CurrentMoney" type="Label" parent="."]
 offset_left = 256.0

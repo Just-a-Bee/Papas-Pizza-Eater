@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjxb8sknwxub7"
-path="res://.godot/imported/pizza_base.png-4e9a0b4919aacb904aec27bfa2acb81c.ctex"
+uid="uid://0m7spvno8xdm"
+path="res://.godot/imported/order button disabled.png-c1d10aa16e0f17a249322722894d292b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pizza_base.png"
-dest_files=["res://.godot/imported/pizza_base.png-4e9a0b4919aacb904aec27bfa2acb81c.ctex"]
+source_file="res://assets/ui/order button disabled.png"
+dest_files=["res://.godot/imported/order button disabled.png-c1d10aa16e0f17a249322722894d292b.ctex"]
 
 [params]
 

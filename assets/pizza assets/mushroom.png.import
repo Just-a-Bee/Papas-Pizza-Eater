@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu2062v1pqj4p"
-path="res://.godot/imported/trophy.png-35c49b780b3d87f9da01e3ae4fea1dc1.ctex"
+uid="uid://busmf0omea03y"
+path="res://.godot/imported/mushroom.png-db9e8e12c161af3017403ac149166539.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trophy.png"
-dest_files=["res://.godot/imported/trophy.png-35c49b780b3d87f9da01e3ae4fea1dc1.ctex"]
+source_file="res://assets/pizza assets/mushroom.png"
+dest_files=["res://.godot/imported/mushroom.png-db9e8e12c161af3017403ac149166539.ctex"]
 
 [params]
 
