@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://stations/order station/order_station.gd" id="1_3wba8"]
 [ext_resource type="Texture2D" uid="uid://dbhwm3m6yn4ym" path="res://assets/order station.png" id="2_vtxmc"]
-[ext_resource type="Texture2D" uid="uid://cu2062v1pqj4p" path="res://assets/trophy.png" id="3_vfr11"]
+[ext_resource type="Texture2D" uid="uid://cu2062v1pqj4p" path="res://assets/upgrades/trophy.png" id="3_vfr11"]
 [ext_resource type="AudioStream" uid="uid://bvxmqp3ov4sm" path="res://assets/sound/sfx/doorbell.wav" id="4_bmghl"]
 
 [node name="OrderStation" type="Node2D"]

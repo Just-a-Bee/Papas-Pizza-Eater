@@ -18,16 +18,16 @@ func _ready():
 	for topping in topping_to_eat_dict.keys():
 		topping_to_eat_dict[topping] = randi_range(0, topping_total_dict[topping])
 	
-	
-	$Contents/Labels/Number.text += str(number)
-	$Contents/Labels/Percent.text += str(percent_to_eat)
-	for topping in topping_to_eat_dict.keys():
-		if topping_to_eat_dict[topping] > 0:
-			var topping_label = Label.new()
-			topping_label.text = topping + ": " + str(topping_to_eat_dict[topping])
-			topping_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-			topping_label.visible = false
-			$Contents/Labels.add_child(topping_label)
+	var numStr = str(number)
+	if number < 10:
+		numStr = "00" + numStr
+	elif number < 100:
+		numStr = "0" + numStr
+	$Contents/Labels/Number.text = numStr
+	$Contents/Labels/Percent.text = "Eat " + str(percent_to_eat) + "%"
+	$Contents/Labels/Pepperoni/PepperoniLabel.text = "X " + str(topping_to_eat_dict["pepperoni"])
+	$Contents/Labels/Mushroom/MushroomLabel.text = "X " + str(topping_to_eat_dict["mushroom"])
+	$Contents/Labels/Pepper/PepperLabel.text = "X " + str(topping_to_eat_dict["pepper"])
 	display_contents()
 
 func display_contents():
@@ -38,18 +38,19 @@ func display_contents():
 
 
 func show_eat():
-	$Contents/EatButton.show()
+	$EatButton.show()
 func hide_eat():
-	$Contents/EatButton.hide()
+	$EatButton.hide()
 func show_finish():
-	$Contents/FinishButton.show()
+	$FinishButton.show()
 func hide_finish():
-	$Contents/FinishButton.hide()
+	$FinishButton.hide()
 
 func _on_eat_button_button_up():
 	get_parent().side_bar.set_disable(true)
 	main.get_node("EatStation").generate_pizza(self)
-	$Contents/EatButton.hide()
+	hide_eat()
+	await get_tree().create_timer(5).timeout
 	show_finish()
 
 
