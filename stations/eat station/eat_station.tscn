@@ -61,13 +61,13 @@ texture = ExtResource("8_jqpo7")
 centered = false
 
 [node name="PepperIcon" type="Sprite2D" parent="."]
-position = Vector2(0, 50)
+position = Vector2(0, 100)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("9_3vdl1")
 centered = false
 
 [node name="MushroomIcon" type="Sprite2D" parent="."]
-position = Vector2(0, 100)
+position = Vector2(0, 50)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("10_wptie")
 centered = false
@@ -81,16 +81,16 @@ text = "x 0"
 
 [node name="PepperCount" type="Label" parent="."]
 offset_left = 56.0
-offset_top = 50.0
+offset_top = 100.0
 offset_right = 111.0
-offset_bottom = 108.0
+offset_bottom = 158.0
 theme_override_font_sizes/font_size = 40
 text = "x 0"
 
 [node name="MushroomCount" type="Label" parent="."]
 offset_left = 56.0
-offset_top = 100.0
+offset_top = 50.0
 offset_right = 111.0
-offset_bottom = 158.0
+offset_bottom = 108.0
 theme_override_font_sizes/font_size = 40
 text = "x 0"

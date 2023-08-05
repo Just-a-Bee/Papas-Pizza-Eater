@@ -95,6 +95,7 @@ description = "Helps you eat a lot more pizza"
 icon = ExtResource("5_22wna")
 
 [node name="Spoon" parent="GridContainer" instance=ExtResource("2_q1leq")]
+visible = false
 layout_mode = 2
 script = ExtResource("3_whsnm")
 item_name = "Comically Large Spoon"
