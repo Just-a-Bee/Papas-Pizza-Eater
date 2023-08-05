@@ -49,6 +49,7 @@ horizontal_alignment = 1
 [node name="Pepperoni" type="Control" parent="Contents/Labels"]
 visible = false
 layout_mode = 2
+size_flags_vertical = 4
 
 [node name="PepperoniSprite" type="Sprite2D" parent="Contents/Labels/Pepperoni"]
 position = Vector2(40, 32)

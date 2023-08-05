@@ -25,3 +25,12 @@ func _process(delta):
 		rotation -= turn_tmp*delta*Globals.left_turn_multi
 	if Input.is_action_pressed("right"):
 		rotation += turn_tmp*delta*Globals.right_turn_multi
+	
+	if position.y < -32:
+		position.y = -32
+	if position.y > 544:
+		position.y = 544
+	if position.x < -32:
+		position.x = -32
+	if position.x > 590:
+		position.x = 590

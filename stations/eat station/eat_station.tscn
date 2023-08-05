@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://dqvrw6x6y5bm6" path="res://assets/crawl frames/crawl-4.png" id="5_xws06"]
 [ext_resource type="Script" path="res://stations/eat station/player.gd" id="6_wn6uu"]
 [ext_resource type="Texture2D" uid="uid://bwbj6up02y3ye" path="res://assets/eat_bg.png" id="7_horvi"]
-[ext_resource type="Texture2D" uid="uid://gxnbfbc8soev" path="res://assets/pepperoni.png" id="8_jqpo7"]
-[ext_resource type="Texture2D" uid="uid://da3mu51dsd1pr" path="res://assets/bell pepper.png" id="9_3vdl1"]
-[ext_resource type="Texture2D" uid="uid://busmf0omea03y" path="res://assets/mushroom.png" id="10_wptie"]
+[ext_resource type="Texture2D" uid="uid://gxnbfbc8soev" path="res://assets/pizza assets/pepperoni.png" id="8_jqpo7"]
+[ext_resource type="Texture2D" uid="uid://da3mu51dsd1pr" path="res://assets/pizza assets/bell pepper.png" id="9_3vdl1"]
+[ext_resource type="Texture2D" uid="uid://busmf0omea03y" path="res://assets/pizza assets/mushroom.png" id="10_wptie"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l0xyn"]
 animations = [{
