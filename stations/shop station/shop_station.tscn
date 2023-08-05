@@ -34,49 +34,6 @@ theme_override_constants/h_separation = 350
 theme_override_constants/v_separation = 210
 columns = 2
 
-[node name="Fork" parent="GridContainer" instance=ExtResource("2_q1leq")]
-layout_mode = 2
-script = ExtResource("3_whsnm")
-item_name = "Fork"
-price = 10.0
-description = "Helps you eat more pizza"
-icon = ExtResource("4_sui45")
-
-[node name="Knife" parent="GridContainer" instance=ExtResource("2_q1leq")]
-visible = false
-layout_mode = 2
-script = ExtResource("3_whsnm")
-item_name = "Knife"
-price = 15.0
-description = "Helps you eat a lot more pizza"
-icon = ExtResource("5_22wna")
-
-[node name="Spoon" parent="GridContainer" instance=ExtResource("2_q1leq")]
-visible = false
-layout_mode = 2
-script = ExtResource("3_whsnm")
-item_name = "Comically Large Spoon"
-price = 30.0
-description = "Helps you eat a comically large amount of pizza"
-icon = ExtResource("6_31psd")
-
-[node name="Skateboard" parent="GridContainer" instance=ExtResource("2_q1leq")]
-layout_mode = 2
-script = ExtResource("4_8k5gj")
-item_name = "Skateboard"
-price = 15.0
-description = "Helps you turn better, wear a helmet!"
-icon = ExtResource("8_kd6mh")
-
-[node name="SkateboardLeft" parent="GridContainer" instance=ExtResource("2_q1leq")]
-visible = false
-layout_mode = 2
-script = ExtResource("5_lilqy")
-item_name = "Left Handed Skateboard"
-price = 30.0
-description = "Helps you turn left better, wear two helmets!"
-icon = ExtResource("10_l7u4o")
-
 [node name="SlipperyNapkin" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
 script = ExtResource("15_ielj3")
@@ -102,6 +59,48 @@ item_name = "Slipperiest Napkin"
 price = 30.0
 description = "So so slippery...."
 icon = ExtResource("16_4yalm")
+
+[node name="Skateboard" parent="GridContainer" instance=ExtResource("2_q1leq")]
+layout_mode = 2
+script = ExtResource("4_8k5gj")
+item_name = "Skateboard"
+price = 15.0
+description = "Helps you turn better, wear a helmet!"
+icon = ExtResource("8_kd6mh")
+
+[node name="SkateboardLeft" parent="GridContainer" instance=ExtResource("2_q1leq")]
+visible = false
+layout_mode = 2
+script = ExtResource("5_lilqy")
+item_name = "Left Handed Skateboard"
+price = 30.0
+description = "Helps you turn left better, wear two helmets!"
+icon = ExtResource("10_l7u4o")
+
+[node name="Fork" parent="GridContainer" instance=ExtResource("2_q1leq")]
+layout_mode = 2
+script = ExtResource("3_whsnm")
+item_name = "Fork"
+price = 10.0
+description = "Helps you eat more pizza"
+icon = ExtResource("4_sui45")
+
+[node name="Knife" parent="GridContainer" instance=ExtResource("2_q1leq")]
+visible = false
+layout_mode = 2
+script = ExtResource("3_whsnm")
+item_name = "Knife"
+price = 15.0
+description = "Helps you eat a lot more pizza"
+icon = ExtResource("5_22wna")
+
+[node name="Spoon" parent="GridContainer" instance=ExtResource("2_q1leq")]
+layout_mode = 2
+script = ExtResource("3_whsnm")
+item_name = "Comically Large Spoon"
+price = 30.0
+description = "Helps you eat a comically large amount of pizza"
+icon = ExtResource("6_31psd")
 
 [node name="PizzaKneepads" parent="GridContainer" instance=ExtResource("2_q1leq")]
 layout_mode = 2
