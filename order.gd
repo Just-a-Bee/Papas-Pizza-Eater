@@ -50,7 +50,12 @@ func _on_eat_button_button_up():
 	get_parent().side_bar.set_disable(true)
 	main.get_node("EatStation").generate_pizza(self)
 	hide_eat()
-	await get_tree().create_timer(5).timeout
+	
+	# if in tutorial, wait until prompt rather than waiting 5 seconds
+	if main.is_in_tutorial:
+		await main.done_prompt_shown
+	else:
+		await get_tree().create_timer(5).timeout
 	show_finish()
 
 

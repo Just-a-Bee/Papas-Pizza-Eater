@@ -1,4 +1,7 @@
-extends Node2D
+extends Station
+
+signal eat_started
+signal eat_finished
 
 @onready var main = get_parent()
 @onready var side_bar = get_parent().get_node("SideBar")
@@ -16,10 +19,14 @@ func station_opened():
 	$Player.set_process(true)
 	if main.current_order:
 		main.current_order.show_eat()
+	super.station_opened()
+	
 func station_closed():
 	$Player.set_process(false)
 	if main.current_order:
 		main.current_order.hide_eat()
+	super.station_closed()
+	
 #function to generate a new pizza and add it to the scene
 func generate_pizza(order):
 	$Player.position = PLAYER_START
@@ -34,11 +41,16 @@ func generate_pizza(order):
 	new_pizza.percent_to_eat = order.percent_to_eat
 	new_pizza.topping_to_eat_dict = order.topping_to_eat_dict
 	
+	eat_started.emit()
+	
 	add_child(new_pizza)
 	var tween = get_tree().create_tween()
 	tween.tween_property(new_pizza, "position", PIZZA_POSITION, 1)
 	await tween.finished
 	new_pizza.can_eat = true
+	
+	
+	
 #functoin to finish eating the current pizza and start grading
 func finish_pizza():
 	var current_pizza = $Pizza
@@ -52,6 +64,7 @@ func finish_pizza():
 	current_pizza.queue_free()
 	main.cut_scene.grade_pizza(pizza_grades)
 	clear_topping_labels()
+	eat_finished.emit()
 
 #function to reset the topping labels to their initial text
 func clear_topping_labels():

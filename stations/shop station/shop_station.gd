@@ -1,9 +1,4 @@
-extends Node2D
-
-func station_opened():
-	pass
-func station_closed():
-	pass
+extends Station
 
 func _ready():
 	Globals.money_changed.connect(_on_money_changed)

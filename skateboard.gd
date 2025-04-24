@@ -1,6 +1,6 @@
+@tool
 extends ShopItem
 
 func do_effect():
-	self.hide()
-	Globals.right_turn_multi = 2
+	Globals.turn_level += 1
 	get_parent().get_node("SkateboardLeft").show()

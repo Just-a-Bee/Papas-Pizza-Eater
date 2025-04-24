@@ -1,4 +1,7 @@
-extends Node2D
+extends Station
+
+signal order_started
+signal order_taken
 
 @onready var main = get_parent()
 @onready var side_bar = get_parent().get_node("SideBar")
@@ -16,15 +19,6 @@ const COUNTER_POS = Vector2(192, 304)
 const PICKUP_SPAWN_POS = Vector2(720, 224)
 const PICKUP_COUNTER_POS = Vector2(256, 224)
 
-func _ready():
-	spawn_customer()
-
-#functions called when station is opened or closed
-func station_opened():
-	pass
-func station_closed():
-	pass
-
 
 #function to spawn a new customer at the door
 func spawn_customer():
@@ -39,6 +33,7 @@ func spawn_customer():
 
 #function to take a customer's order
 func take_order():
+	order_started.emit()
 	main.show_cut_scene()
 	main.cut_scene.take_order()
 	var new_order = order.instantiate()
@@ -52,3 +47,4 @@ func take_order():
 	side_bar.set_disable(false)
 	main.current_order = new_order
 	current_customer.go_to_pickup()
+	order_taken.emit()

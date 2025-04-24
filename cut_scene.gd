@@ -1,5 +1,7 @@
 extends Node2D
 
+signal animation_finished
+
 @onready var main = get_parent()
 @onready var order_station = main.get_node("OrderStation")
 @onready var side_bar = get_parent().get_node("SideBar")
@@ -20,7 +22,7 @@ func stop_take_order():
 
 func grade_pizza(pizza_grades):
 	main.change_station(main.STATIONS.ORDER)
-	$PercentScore.text = "% Score: " + str(pizza_grades[0])
+	$PercentScore.text = "Eating Score: " + str(pizza_grades[0])
 	$ToppingScore.text = "Topping Score: " + str(pizza_grades[1])
 	$TimeScore.text = "Time Score: " + str(pizza_grades[2])
 	var avg_pizza_grade = (pizza_grades[0] + pizza_grades[1] + pizza_grades[2])/3
@@ -79,4 +81,7 @@ func grade_pizza(pizza_grades):
 	main.get_node("OrderStation").remove_child(main.get_node("OrderStation").current_customer)
 	main.get_node("OrderStation").current_customer.queue_free()
 	main.play_music()
-	main.get_node("OrderStation").spawn_customer()
+	# if not in tutorial, spawn a new customer
+	if (!main.is_in_tutorial):
+		main.get_node("OrderStation").spawn_customer()
+	animation_finished.emit()

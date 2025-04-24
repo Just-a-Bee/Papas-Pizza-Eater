@@ -28,11 +28,6 @@ offset_bottom = 192.0
 layout_mode = 2
 text = "Play"
 
-[node name="minigame" type="Button" parent="Sprite2D/VBoxContainer"]
-layout_mode = 2
-text = "Minigame
-"
-
 [node name="Credits" type="Button" parent="Sprite2D/VBoxContainer"]
 layout_mode = 2
 text = "Credits"
@@ -50,5 +45,4 @@ autoplay = true
 visible = false
 
 [connection signal="button_up" from="Sprite2D/VBoxContainer/Play" to="." method="_on_play_button_up"]
-[connection signal="button_up" from="Sprite2D/VBoxContainer/minigame" to="." method="_on_minigame_button_up"]
 [connection signal="button_up" from="Sprite2D/VBoxContainer/Credits" to="." method="_on_credits_button_up"]

@@ -59,7 +59,7 @@ offset_top = 472.0
 offset_right = 228.0
 offset_bottom = 544.0
 theme_override_font_sizes/font_size = 24
-text = "% Score: 100"
+text = "Eating Score: 100"
 
 [node name="ToppingScore" type="Label" parent="."]
 visible = false
