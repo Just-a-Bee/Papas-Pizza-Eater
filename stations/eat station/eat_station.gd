@@ -1,10 +1,13 @@
-extends Node2D
+extends Station
+
+signal eat_started
+signal eat_finished
 
 @onready var main = get_parent()
 @onready var side_bar = get_parent().get_node("SideBar")
 var pizza = preload("res://stations/eat station/eat_station_pizza.tscn")
 
-
+#position constants for things
 const PIZZA_START = Vector2(-300, 48)
 const PIZZA_POSITION = Vector2(88, 48)
 const PIZZA_END = Vector2(600, 48)
@@ -12,17 +15,19 @@ const PLAYER_START = Vector2(320, 564)
 
 func _ready():
 	$Player.set_process(false)
-
 func station_opened():
 	$Player.set_process(true)
 	if main.current_order:
 		main.current_order.show_eat()
-
+	super.station_opened()
+	
 func station_closed():
 	$Player.set_process(false)
 	if main.current_order:
 		main.current_order.hide_eat()
-
+	super.station_closed()
+	
+#function to generate a new pizza and add it to the scene
 func generate_pizza(order):
 	$Player.position = PLAYER_START
 	$Player.rotation = 0
@@ -36,12 +41,17 @@ func generate_pizza(order):
 	new_pizza.percent_to_eat = order.percent_to_eat
 	new_pizza.topping_to_eat_dict = order.topping_to_eat_dict
 	
+	eat_started.emit()
+	
 	add_child(new_pizza)
 	var tween = get_tree().create_tween()
 	tween.tween_property(new_pizza, "position", PIZZA_POSITION, 1)
 	await tween.finished
 	new_pizza.can_eat = true
-
+	
+	
+	
+#functoin to finish eating the current pizza and start grading
 func finish_pizza():
 	var current_pizza = $Pizza
 	var pizza_grades = current_pizza.grade()
@@ -53,3 +63,16 @@ func finish_pizza():
 	remove_child(current_pizza)
 	current_pizza.queue_free()
 	main.cut_scene.grade_pizza(pizza_grades)
+	clear_topping_labels()
+	eat_finished.emit()
+
+#function to reset the topping labels to their initial text
+func clear_topping_labels():
+	$PepperoniCount.text = "x 0"
+	$PepperCount.text = "x 0"
+	$MushroomCount.text = "x 0"
+#function to update the topping labels to the current eaten toppings
+func update_topping_labels(toppings_eaten_dict):
+	$PepperoniCount.text = "x " + str(toppings_eaten_dict["pepperoni"])
+	$PepperCount.text = "x " + str(toppings_eaten_dict["pepper"])
+	$MushroomCount.text = "x " + str(toppings_eaten_dict["mushroom"])

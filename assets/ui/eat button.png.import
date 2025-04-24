@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://busmf0omea03y"
-path="res://.godot/imported/mushroom.png-1eeaa92746877ee598b2e48ba3d07332.ctex"
+uid="uid://cevbvfgsglj6h"
+path="res://.godot/imported/eat button.png-e05db4d2fea949513e5327ad60d1ad0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mushroom.png"
-dest_files=["res://.godot/imported/mushroom.png-1eeaa92746877ee598b2e48ba3d07332.ctex"]
+source_file="res://assets/ui/eat button.png"
+dest_files=["res://.godot/imported/eat button.png-e05db4d2fea949513e5327ad60d1ad0d.ctex"]
 
 [params]
 

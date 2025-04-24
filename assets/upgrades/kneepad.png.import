@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqvrw6x6y5bm6"
-path="res://.godot/imported/crawl-4.png-c8e59f72482a1518b49d83c051777944.ctex"
+uid="uid://djjpeo47c0ep3"
+path="res://.godot/imported/kneepad.png-dcd04cae33cd29999a66c79b6c6992ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crawl frames/crawl-4.png"
-dest_files=["res://.godot/imported/crawl-4.png-c8e59f72482a1518b49d83c051777944.ctex"]
+source_file="res://assets/upgrades/kneepad.png"
+dest_files=["res://.godot/imported/kneepad.png-dcd04cae33cd29999a66c79b6c6992ae.ctex"]
 
 [params]
 

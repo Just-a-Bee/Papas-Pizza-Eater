@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gxnbfbc8soev"
-path="res://.godot/imported/pepperoni.png-2f8896cb294edc3334b69283a6bc2380.ctex"
+uid="uid://bgtji7a4l8wkj"
+path="res://.godot/imported/knife.png-7ad291f51518e4c5821dec4d81bc7196.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pepperoni.png"
-dest_files=["res://.godot/imported/pepperoni.png-2f8896cb294edc3334b69283a6bc2380.ctex"]
+source_file="res://assets/player/knife.png"
+dest_files=["res://.godot/imported/knife.png-7ad291f51518e4c5821dec4d81bc7196.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6ogcr3pbvxeq"
-path="res://.godot/imported/crawl-2.png-4ffb14d147a7d37b1c79224e3a660499.ctex"
+uid="uid://dmmp1ej7es8o2"
+path="res://.godot/imported/shop button disabled.png-12784b0bd49074100066a387c14cdf40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crawl frames/crawl-2.png"
-dest_files=["res://.godot/imported/crawl-2.png-4ffb14d147a7d37b1c79224e3a660499.ctex"]
+source_file="res://assets/ui/shop button disabled.png"
+dest_files=["res://.godot/imported/shop button disabled.png-12784b0bd49074100066a387c14cdf40.ctex"]
 
 [params]
 

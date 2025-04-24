@@ -14,6 +14,8 @@ var time_eaten = 0
 
 var topping = preload("res://pizza_topping.tscn")
 
+signal topping_eaten
+
 func _init():
 	mask = load("res://assets/pizza_alpha.png")
 #	mask = Image.create(Globals.pizza_diam, Globals.pizza_diam, false, Image.FORMAT_RGBA8)
@@ -24,7 +26,7 @@ func _process(delta):
 	if can_eat:
 		time_eaten += delta
 		var head_pos = player.position + Vector2(0, -50).rotated(player.rotation)
-		var eat_rect = Rect2i(head_pos.x-Globals.eat_area/2 - position.x, head_pos.y-Globals.eat_area/2 - position.y, Globals.eat_area, Globals.eat_area)
+		var eat_rect = Rect2i(head_pos.x-player.eat_area/2 - position.x, head_pos.y-player.eat_area/2 - position.y, player.eat_area, player.eat_area)
 		mask.fill_rect(eat_rect, Color.BLACK)
 		material.set_shader_parameter("mask", ImageTexture.create_from_image(self.mask))
 #function to spawn a topping at a random positoin
@@ -46,6 +48,9 @@ func add_topping(topping_name):
 		toppings_eaten_dict[topping_name] += 1
 	else:
 		toppings_eaten_dict[topping_name] = 1
+	get_parent().update_topping_labels(toppings_eaten_dict)
+	$Munch.play()
+	
 
 #function to grade the pizza based on desired state returns an array of three grades
 func grade():
@@ -64,6 +69,7 @@ func grade():
 	var time_off = time_eaten - expected_time
 	if time_off > 0:
 		time_grade -= time_off*2
+	time_grade = max(time_grade, 0)
 	
 	return [percent_grade, toppings_grade, time_grade]
 

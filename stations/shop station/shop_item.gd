@@ -1,6 +1,8 @@
+@tool
 extends Control
 class_name ShopItem
 
+@export var last:bool = false
 @export var item_name:String
 @export var price:float
 @export var description:String
@@ -16,6 +18,11 @@ func _ready():
 func get_bought():
 	Globals.money -= price
 	do_effect()
+	if not last:
+		hide()
+	else:
+		$Button.text = "Sold Out"
+		$Button.disabled = true
 
 func _on_button_button_up():
 	if Globals.money >= price:
@@ -23,3 +30,10 @@ func _on_button_button_up():
 
 func do_effect():
 	pass
+
+func _process(_delta):
+	if Engine.is_editor_hint():
+		$Contents/Name.text = "[center]" + item_name + "[/center]"
+		$Contents/Cost.text = "$" + str(price)
+		$Contents/Description.text = description
+		$Icon.texture = icon

@@ -1,0 +1,171 @@
+[gd_scene load_steps=18 format=3 uid="uid://dsfenh30f6myr"]
+
+[ext_resource type="Texture2D" uid="uid://dfj71qw1jj1of" path="res://assets/player/crawl frames/crawl-1.png" id="1_unbdw"]
+[ext_resource type="Texture2D" uid="uid://6ogcr3pbvxeq" path="res://assets/player/crawl frames/crawl-2.png" id="2_xej21"]
+[ext_resource type="Texture2D" uid="uid://cpoqfeaybgvfa" path="res://assets/player/crawl frames/crawl-3.png" id="3_t0kyf"]
+[ext_resource type="Texture2D" uid="uid://dqvrw6x6y5bm6" path="res://assets/player/crawl frames/crawl-4.png" id="4_hcjbx"]
+[ext_resource type="Script" path="res://stations/eat station/player.gd" id="5_drjfq"]
+[ext_resource type="Texture2D" uid="uid://bqem7jigkekhu" path="res://assets/player/crawl frames/pizza-crawl-1.png" id="5_kmguk"]
+[ext_resource type="Texture2D" uid="uid://ceavlbj2jn2cm" path="res://assets/player/crawl frames/pizza-crawl-2.png" id="6_18du1"]
+[ext_resource type="Texture2D" uid="uid://btqfxtvsg6dqq" path="res://assets/player/fork.png" id="6_66vcv"]
+[ext_resource type="Texture2D" uid="uid://hketpwnq4v6k" path="res://assets/player/spoon.png" id="7_g6u0n"]
+[ext_resource type="Texture2D" uid="uid://celnrofb65lyq" path="res://assets/player/crawl frames/pizza-crawl-3.png" id="7_pmsmy"]
+[ext_resource type="Texture2D" uid="uid://bgtji7a4l8wkj" path="res://assets/player/knife.png" id="8_dv2vg"]
+[ext_resource type="Texture2D" uid="uid://yrgo1w3afbpv" path="res://assets/player/crawl frames/pizza-crawl-4.png" id="8_heigp"]
+[ext_resource type="Texture2D" uid="uid://chs3y7nrcgvl6" path="res://assets/player/skateboard.png" id="9_l2enh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l0xyn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_unbdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xej21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t0kyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hcjbx")
+}],
+"loop": true,
+"name": &"Crawl",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_kmguk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_18du1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pmsmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_heigp")
+}],
+"loop": true,
+"name": &"Pizza_Crawl",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_41dfa"]
+radius = 19.0904
+
+[sub_resource type="Animation" id="Animation_qeoj6"]
+resource_name = "crawl"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fork:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(48, -108), Vector2(46.6667, -110.667), Vector2(66.6667, -92), Vector2(65.3333, -82.6667)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fork:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 0.497419, 0.2145, 0.148182]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Knife:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(-56, -97.3333), Vector2(-50.6667, -88), Vector2(-33.3333, -120), Vector2(-40, -114.667)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Knife:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [-0.174499, -0.174499, -0.388039, -0.281269]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_us0wl"]
+_data = {
+"crawl": SubResource("Animation_qeoj6")
+}
+
+[node name="Player" type="AnimatedSprite2D"]
+z_index = 2
+position = Vector2(320, 564)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_l0xyn")
+animation = &"Crawl"
+script = ExtResource("5_drjfq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -74.667)
+shape = SubResource("CircleShape2D_41dfa")
+
+[node name="Boardparent" type="Node2D" parent="."]
+visible = false
+z_index = -1
+
+[node name="Board" type="Sprite2D" parent="Boardparent"]
+position = Vector2(61.3333, -34.6666)
+texture = ExtResource("9_l2enh")
+
+[node name="Fork" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+position = Vector2(46.6667, -110.667)
+rotation = 0.497419
+texture = ExtResource("6_66vcv")
+
+[node name="Spoon" type="Sprite2D" parent="Fork"]
+visible = false
+position = Vector2(-25.078, -18.2448)
+texture = ExtResource("7_g6u0n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_us0wl")
+}
+
+[node name="Knife" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+position = Vector2(-50.6667, -88)
+rotation = -0.174499
+texture = ExtResource("8_dv2vg")

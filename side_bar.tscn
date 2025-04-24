@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddimem50csu6i"]
+[gd_scene load_steps=12 format=3 uid="uid://ddimem50csu6i"]
 
 [ext_resource type="Script" path="res://side_bar.gd" id="1_knxtx"]
-[ext_resource type="Texture2D" uid="uid://cvhrtergt2y0v" path="res://assets/sidebar.png" id="2_yxr36"]
+[ext_resource type="Texture2D" uid="uid://cvhrtergt2y0v" path="res://assets/ui/sidebar.png" id="2_xarfc"]
+[ext_resource type="Texture2D" uid="uid://52v0nivaa272" path="res://assets/ui/order button.png" id="3_ebqt8"]
+[ext_resource type="Texture2D" uid="uid://yep0qfi8y5ov" path="res://assets/order button pressed.png" id="4_c114w"]
+[ext_resource type="Texture2D" uid="uid://0m7spvno8xdm" path="res://assets/ui/order button disabled.png" id="4_gptnf"]
+[ext_resource type="Texture2D" uid="uid://cevbvfgsglj6h" path="res://assets/ui/eat button.png" id="4_qp33x"]
+[ext_resource type="Texture2D" uid="uid://drjrhqkwrmqln" path="res://assets/ui/shop button.png" id="5_wo5l6"]
+[ext_resource type="Texture2D" uid="uid://d38cwvd358rjo" path="res://assets/ui/eat button disabled.png" id="6_py3eq"]
+[ext_resource type="Texture2D" uid="uid://c2uv56tljtixh" path="res://assets/eat button pressed.png" id="7_02afx"]
+[ext_resource type="Texture2D" uid="uid://dmmp1ej7es8o2" path="res://assets/ui/shop button disabled.png" id="8_7w4ya"]
+[ext_resource type="Texture2D" uid="uid://ccynptuqcxrew" path="res://assets/shop button pressed.png" id="10_8mgth"]
 
 [node name="SideBar" type="Control"]
 layout_mode = 3
@@ -14,31 +23,36 @@ script = ExtResource("1_knxtx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-96, 256)
-texture = ExtResource("2_yxr36")
+texture = ExtResource("2_xarfc")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 280.0
-offset_bottom = 96.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
+offset_left = 4.0
+offset_top = 16.0
+offset_right = 320.0
+offset_bottom = 104.0
+scale = Vector2(0.9, 0.9)
+theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Order" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Order" type="TextureButton" parent="HBoxContainer"]
 layout_mode = 2
-text = "Order"
+texture_normal = ExtResource("3_ebqt8")
+texture_pressed = ExtResource("4_c114w")
+texture_disabled = ExtResource("4_gptnf")
 
-[node name="Eat" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Eat" type="TextureButton" parent="HBoxContainer"]
 layout_mode = 2
-text = "Eat"
+texture_normal = ExtResource("4_qp33x")
+texture_pressed = ExtResource("7_02afx")
+texture_disabled = ExtResource("6_py3eq")
 
-[node name="Shop" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Shop" type="TextureButton" parent="HBoxContainer"]
 layout_mode = 2
-text = "Shop"
+texture_normal = ExtResource("5_wo5l6")
+texture_pressed = ExtResource("10_8mgth")
+texture_disabled = ExtResource("8_7w4ya")
 
-[connection signal="button_up" from="VBoxContainer/HBoxContainer/Order" to="." method="_on_order_button_up"]
-[connection signal="button_up" from="VBoxContainer/HBoxContainer/Eat" to="." method="_on_eat_button_up"]
-[connection signal="button_up" from="VBoxContainer/HBoxContainer/Shop" to="." method="_on_shop_button_up"]
+[connection signal="button_up" from="HBoxContainer/Order" to="." method="_on_order_button_up"]
+[connection signal="button_up" from="HBoxContainer/Eat" to="." method="_on_eat_button_up"]
+[connection signal="button_up" from="HBoxContainer/Shop" to="." method="_on_shop_button_up"]

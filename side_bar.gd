@@ -4,9 +4,9 @@ extends Control
 
 #function to disable or enable the buttons
 func set_disable(disable):
-	$VBoxContainer/HBoxContainer/Order.disabled = disable
-	$VBoxContainer/HBoxContainer/Eat.disabled = disable
-	$VBoxContainer/HBoxContainer/Shop.disabled = disable
+	$HBoxContainer/Order.disabled = disable
+	$HBoxContainer/Eat.disabled = disable
+	$HBoxContainer/Shop.disabled = disable
 
 #when the buttons are pressed, change main to respective station 
 func _on_order_button_up():

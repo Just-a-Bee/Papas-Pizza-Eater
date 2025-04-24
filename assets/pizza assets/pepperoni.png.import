@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjxb8sknwxub7"
-path="res://.godot/imported/pizza_base.png-4e9a0b4919aacb904aec27bfa2acb81c.ctex"
+uid="uid://gxnbfbc8soev"
+path="res://.godot/imported/pepperoni.png-4666a154b197f3dfd62551d3aed87e81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pizza_base.png"
-dest_files=["res://.godot/imported/pizza_base.png-4e9a0b4919aacb904aec27bfa2acb81c.ctex"]
+source_file="res://assets/pizza assets/pepperoni.png"
+dest_files=["res://.godot/imported/pepperoni.png-4666a154b197f3dfd62551d3aed87e81.ctex"]
 
 [params]
 
